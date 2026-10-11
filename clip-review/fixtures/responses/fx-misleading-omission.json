@@ -1,0 +1,65 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:06.905Z",
+    "threadId": "01a12cc9-48ec-7492-a825-c3597b11d593"
+  },
+  "binding": {
+    "packetHash": "5fb87ddb930390fc1b9a2072469f53df3662a794cfb0860951bd7fd422e6f684",
+    "handoff": "fixtures/inputs/04-misleading-omission.json",
+    "boundAt": "2026-10-11T21:28:54.707Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-safe-diabetes",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e07",
+          "e08"
+        ],
+        "kindIssue": null,
+        "explanation": "Both cited comments explicitly ask whether fasting is safe for someone with diabetes, supporting the claimed two examples."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-safe-diabetes",
+        "clipId": "clip-safe",
+        "verdict": "related_only",
+        "explanation": "The clip describes personal safety and makes a broad claim about suitability, but does not address diabetes-specific safety.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-safe-t1",
+            "quote": "Is it safe? For me it felt completely safe, and honestly I think pretty much anyone can do this."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The clip ends before the speaker specifically tells diabetic viewers to consult a doctor and recounts a type one diabetic friend's low blood sugar episode. Omitting this qualification leaves an overstated impression that fasting is safe for diabetic viewers.",
+            "sourceSegmentIds": [
+              "s17",
+              "s18"
+            ]
+          }
+        ],
+        "limitations": []
+      }
+    ],
+    "recommendations": [],
+    "unansweredQuestions": [
+      {
+        "questionId": "q-safe-diabetes",
+        "status": "not_found_in_generated_clips",
+        "explanation": "The source addresses this question in s17–s18: diabetic viewers should consult a doctor before starting, and the speaker describes a low blood sugar episode. Neither passage is included in the generated clip."
+      }
+    ],
+    "limitations": [
+      "Audience evidence consists of synthetic fixture comments, not comments collected from YouTube. The reported total of 212 comments and broader question frequency cannot be verified from the two supplied examples.",
+      "The source provides a caution and an anecdote, not clinical evidence establishing safety for people with diabetes."
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "base": "http://127.0.0.1:3103",
+  "results": [
+    "Homepage 1440px: no horizontal overflow, fonts and evidence loaded.",
+    "Homepage 1024px: no horizontal overflow, fonts and evidence loaded.",
+    "Homepage 768px: no horizontal overflow, fonts and evidence loaded.",
+    "Homepage 390px: no horizontal overflow, fonts and evidence loaded.",
+    "Rapid question selections settle on latest state, with no audio playback.",
+    "Reduced motion: immediate evidence changes, no running animations.",
+    "Workbench: URL carried over, live unavailable, credit boundary, sample research/generate/review, missing media, no match and unverifiable retained; refresh restores sample.",
+    "Mobile menu and dialog close on Escape; dialog fits 390px.",
+    "Review load failure and retry use saved sample evidence without generation."
+  ],
+  "browserErrors": []
+}

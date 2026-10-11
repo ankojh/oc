@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "research": {
+    "schemaVersion": "audience-clips.v1",
+    "runId": "fx-all-transcripts-unavailable",
+    "mode": "fixture",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=fxIF30days",
+      "videoId": "fxIF30days",
+      "channelId": "UCfixtureMaya",
+      "title": "I Tried Intermittent Fasting for 30 Days (Honest Results)"
+    },
+    "creatorGoal": "Make shorts that answer the questions my viewers keep asking, without overselling results.",
+    "researchStatus": "ready",
+    "coverage": {
+      "fetchedAt": "2026-09-08T00:00:00Z",
+      "videoIds": [
+        "fxIF30days"
+      ],
+      "commentCount": 212,
+      "samplingMethod": "fixture: hand-written synthetic comments",
+      "limitations": [
+        "Synthetic fixture comments; not collected from YouTube."
+      ]
+    },
+    "evidence": [
+      {
+        "id": "e05",
+        "commentId": "Ugx_fixture_e05",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e05",
+        "quote": "how much did you actually lose and did it stay off after you stopped?",
+        "publishedAt": "2026-09-03T18:05:10Z"
+      },
+      {
+        "id": "e06",
+        "commentId": "Ugx_fixture_e06",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e06",
+        "quote": "8 lbs is great but did you gain it back??",
+        "publishedAt": "2026-09-04T02:44:39Z"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-weight",
+        "question": "How much weight did you lose, and did you keep it off afterwards?",
+        "kind": "explicit",
+        "evidenceIds": [
+          "e05",
+          "e06"
+        ],
+        "observedCommentCount": 2,
+        "priority": 1,
+        "rationale": "Viewers asked for the number and whether it lasted."
+      }
+    ],
+    "generationBrief": {
+      "targetQuestionIds": [
+        "q-weight"
+      ],
+      "customPrompt": "Make clips that answer: How much weight did you lose, and did you keep it off afterwards?",
+      "durationSec": [
+        15,
+        60
+      ],
+      "aspectRatio": "portrait"
+    }
+  },
+  "generation": {
+    "provider": "opusclip",
+    "projectId": "fixture-project-fx-all-transcripts-unavailable",
+    "requestedQuestionIds": [
+      "q-weight"
+    ],
+    "submittedPrompt": "Make clips that answer: How much weight did you lose, and did you keep it off afterwards?",
+    "completedAt": "2026-09-08T01:00:00Z"
+  },
+  "sourceTranscript": {
+    "coverage": "unavailable",
+    "segments": [],
+    "limitations": [
+      "Captions disabled on this video."
+    ]
+  },
+  "clips": [
+    {
+      "id": "clip-results-vertical",
+      "title": "Results recap (vertical)",
+      "previewUrl": null,
+      "exportUrl": null,
+      "sourceRanges": [
+        {
+          "startMs": 122000,
+          "endMs": 166000
+        }
+      ],
+      "transcriptStatus": "unavailable",
+      "transcript": []
+    },
+    {
+      "id": "clip-weight",
+      "title": "My 30 day results: -8 lbs",
+      "previewUrl": "https://fixtures.invalid/previews/clip-weight.mp4",
+      "exportUrl": null,
+      "sourceRanges": [
+        {
+          "startMs": 122000,
+          "endMs": 144000
+        }
+      ],
+      "transcriptStatus": "unavailable",
+      "transcript": []
+    }
+  ],
+  "limitations": [
+    "Fixture handoff for clip-review development."
+  ]
+}

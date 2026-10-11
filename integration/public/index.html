@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Audience questions → clips</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="mode-banner" class="banner" hidden></div>
+  <header>
+    <h1>Audience questions → clips</h1>
+    <p class="sub">Finds the questions your commenters ask, generates clips with OpusClip, and checks which clips actually answer them.</p>
+  </header>
+  <main>
+    <aside>
+      <form id="start">
+        <label>Public YouTube video URL
+          <input name="videoUrl" type="url" required placeholder="https://www.youtube.com/watch?v=..." />
+        </label>
+        <label>Goal <span class="muted">(optional)</span>
+          <input name="creatorGoal" type="text" maxlength="500" placeholder="e.g. Turn recurring viewer questions into Shorts" />
+        </label>
+        <fieldset>
+          <legend>Mode</legend>
+          <label class="inline"><input type="radio" name="mode" value="fixture" checked /> Fixture <span class="muted">(synthetic data, no keys, no credits)</span></label>
+          <label class="inline"><input type="radio" name="mode" value="live" /> Live <span class="muted">(YouTube, Codex, OpusClip)</span></label>
+        </fieldset>
+        <p id="mode-help" class="muted small"></p>
+        <div class="row">
+          <button type="submit">Research comments</button>
+          <button type="button" id="fixture-demo" class="secondary">Load fixture demo</button>
+        </div>
+        <p id="start-error" class="error" hidden></p>
+      </form>
+      <section id="services" class="small muted"></section>
+      <h3>Recent</h3>
+      <ul id="recent" class="recent"></ul>
+    </aside>
+    <section id="view">
+      <p class="muted">Start with a video URL. Nothing is generated until you press Generate.</p>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

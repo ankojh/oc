@@ -1,0 +1,22 @@
+{
+  "runId": "fx-misleading-omission",
+  "scenario": "misleading omission supported by source",
+  "description": "clip-safe says 'pretty much anyone can do this'; the very next source segments (s17, s18) warn diabetics to see a doctor and describe a hypoglycemia episode.",
+  "status": "complete",
+  "verdicts": {
+    "q-safe-diabetes|clip-safe": [
+      "partial",
+      "related_only",
+      "direct"
+    ]
+  },
+  "contextWarningRequired": [
+    {
+      "pair": "q-safe-diabetes|clip-safe",
+      "anyOfSourceIds": [
+        "s17",
+        "s18"
+      ]
+    }
+  ]
+}

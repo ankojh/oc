@@ -1,0 +1,32 @@
+{
+  "runId": "fx-unsupported-question",
+  "scenario": "question unsupported by cited comments; inferred question",
+  "description": "q-supplements cites only a camera comment and inflates observedCommentCount to 14: must be flagged unsupported. q-window is inferred and must stay labelled inferred.",
+  "status": "complete",
+  "verdicts": {
+    "q-supplements|clip-hunger": [
+      "no_match",
+      "related_only"
+    ],
+    "q-hunger|clip-hunger": [
+      "direct"
+    ],
+    "q-window|clip-window": [
+      "direct",
+      "partial"
+    ]
+  },
+  "unsupportedQuestions": [
+    "q-supplements"
+  ],
+  "unanswered": {
+    "q-supplements": [
+      "cannot_assess"
+    ]
+  },
+  "recommendations": {
+    "mustInclude": [
+      "clip-hunger"
+    ]
+  }
+}

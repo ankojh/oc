@@ -1,0 +1,25 @@
+{
+  "name": "opusclip-marketing-concept",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node server.mjs",
+    "start:connected": "npm run build && node scripts/launch.mjs",
+    "test:integration": "../integration/node_modules/.bin/tsx scripts/test-integration.ts",
+    "test:a11y": "node scripts/check-accessibility.mjs",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "test:browser": "node scripts/verify-browser.mjs",
+    "deliverables": "node scripts/build-deliverables.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "playwright": "^1.58.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:40.086Z",
+    "threadId": "01a12cc9-8c37-7773-aa9b-e2b18b73e4b5"
+  },
+  "binding": {
+    "packetHash": "a814ea42a565973d87673aeef569fb438766d909c1f20f2719faf48a0316c850",
+    "handoff": "fixtures/inputs/09-repeated-answer.json",
+    "boundAt": "2026-10-11T21:28:54.711Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-hunger",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e01",
+          "e02"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments explicitly ask how the creator handled hunger during the first week or first few days."
+      },
+      {
+        "questionId": "q-weight",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e05",
+          "e06"
+        ],
+        "kindIssue": null,
+        "explanation": "e05 asks both how much weight was lost and whether it stayed off; e06 explicitly asks about regain."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger",
+        "verdict": "direct",
+        "explanation": "The creator describes first-week hunger and says more water with a pinch of salt helped, with hunger subsiding by day six.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger-short",
+        "verdict": "direct",
+        "explanation": "The clip gives the first-week problem, the creator's response, and when hunger eased.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-short-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger-water",
+        "verdict": "direct",
+        "explanation": "It explicitly describes what the creator did and says hunger eased by day six, although the opening lacks the fuller first-week setup.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-water-t1",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "The opening phrase 'What fixed it' refers to a setup outside this clip, reducing standalone clarity."
+        ]
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-weight",
+        "verdict": "no_match",
+        "explanation": "The clip reports weight and waist changes without discussing hunger management.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "The clip discusses hunger and energy, with no weight-loss or maintenance results.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-hunger-short",
+        "verdict": "no_match",
+        "explanation": "The clip discusses hunger management without reporting weight loss or regain.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-hunger-water",
+        "verdict": "no_match",
+        "explanation": "The clip discusses hunger relief and energy without addressing weight results.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-weight",
+        "verdict": "partial",
+        "explanation": "It answers the amount lost—eight pounds in thirty days—but does not answer whether that loss lasted.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-weight-t2",
+            "quote": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The clip ends before the creator reports regaining three pounds the following month, leaving a net loss closer to five pounds. Used to answer this audience question, the cutoff could overstate the lasting result.",
+            "sourceSegmentIds": [
+              "s14",
+              "s15"
+            ]
+          }
+        ],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-hunger-short",
+        "questionIds": [
+          "q-hunger"
+        ],
+        "reason": "A concise, self-contained answer to both hunger comments, with the first-week setup and day-six outcome. Present it as the creator's personal experience; the other hunger clips repeat the same answer."
+      },
+      {
+        "rank": 2,
+        "clipId": "clip-weight",
+        "questionIds": [
+          "q-weight"
+        ],
+        "reason": "Adds the requested weight-loss amount, but only partially answers the comments. Extend it to include s14 and s15 before publishing so viewers hear about regain and the five-pound net result."
+      }
+    ],
+    "unansweredQuestions": [],
+    "limitations": [
+      "The comments are synthetic fixtures, not collected audience feedback. The four supplied comments support the questions, but the claimed total of 212 comments and broader audience frequency cannot be verified.",
+      "No generated clip answers the maintenance portion of q-weight; the full supplied source answers it in s14 and s15.",
+      "The transcripts describe personal results and do not establish that water and salt caused hunger relief or that others would experience the same outcome."
+    ]
+  }
+}

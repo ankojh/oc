@@ -1,0 +1,187 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:45.853Z",
+    "threadId": "01a12cc9-85dd-7c52-8b7e-c6e39652c562"
+  },
+  "binding": {
+    "packetHash": "97956ed9f7d3dc67aa219c58df97b0e2bf0e2fe8d9dc0d39508ef39705891c6c",
+    "handoff": "fixtures/inputs/05-missing-transcripts.json",
+    "boundAt": "2026-10-11T21:28:54.708Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-hunger",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e01",
+          "e02"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments explicitly ask how the creator handled hunger during the first week or first few days."
+      },
+      {
+        "questionId": "q-weight",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e05",
+          "e06"
+        ],
+        "kindIssue": null,
+        "explanation": "e05 asks for weight lost and whether it stayed off; e06 explicitly asks about regaining it."
+      },
+      {
+        "questionId": "q-safe-diabetes",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e07",
+          "e08"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments explicitly ask whether fasting is safe or appropriate for someone with diabetes."
+      },
+      {
+        "questionId": "q-break-fast",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e03",
+          "e04"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments ask what the creator ate as the first meal."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger",
+        "verdict": "direct",
+        "explanation": "The creator describes drinking more water with a pinch of salt and reports that hunger subsided by day six. This answers the question about their personal experience.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "This is a personal account, not evidence that the same approach will work for viewers."
+        ]
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-safe",
+        "verdict": "no_match",
+        "explanation": "The safety statement does not explain how the creator handled hunger.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "The clip discusses hunger and energy, without reporting weight loss or subsequent maintenance.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-safe",
+        "verdict": "no_match",
+        "explanation": "The clip gives no weight-loss amount or follow-up result.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-safe-diabetes",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "The creator's hunger and energy experiences do not address safety for people with diabetes.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-safe-diabetes",
+        "clipId": "clip-safe",
+        "verdict": "related_only",
+        "explanation": "The clip makes a broad safety claim but never addresses diabetes. Personal comfort and the assertion that almost anyone can fast do not answer this condition-specific question.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-safe-t1",
+            "quote": "Is it safe? For me it felt completely safe, and honestly I think pretty much anyone can do this."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The broad reassurance omits that the creator first consulted a doctor because of blood-pressure medication and received approval conditional on monitoring how they felt. Without that context, viewers could mistake this for unconditional reassurance applicable to their own medical conditions.",
+            "sourceSegmentIds": [
+              "s03"
+            ]
+          }
+        ],
+        "limitations": [
+          "No nearby context is supplied, and source captions after 1:40 are largely missing; further qualifications cannot be checked."
+        ]
+      },
+      {
+        "questionId": "q-break-fast",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "The clip mentions water and salt but does not identify the meal used to break the fast.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-break-fast",
+        "clipId": "clip-safe",
+        "verdict": "no_match",
+        "explanation": "The safety statement contains no information about the first meal.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-hunger",
+        "questionIds": [
+          "q-hunger"
+        ],
+        "reason": "Directly answers two explicit audience comments with a clear personal account and timeline. Keep the framing personal to avoid promising viewers the same result."
+      }
+    ],
+    "unansweredQuestions": [
+      {
+        "questionId": "q-weight",
+        "status": "not_found_in_available_source",
+        "explanation": "Neither reviewed clip nor the provided source segments gives the amount lost and whether it stayed off. The source is partial, so an answer may be in untranscribed parts; clip-results-vertical also cannot be assessed."
+      },
+      {
+        "questionId": "q-safe-diabetes",
+        "status": "not_found_in_available_source",
+        "explanation": "The provided source includes general safety remarks but no diabetes-specific answer. An answer may exist in untranscribed parts."
+      },
+      {
+        "questionId": "q-break-fast",
+        "status": "not_found_in_available_source",
+        "explanation": "The provided source describes eating-window timing but never identifies the first meal. An answer may exist in untranscribed parts."
+      }
+    ],
+    "limitations": [
+      "Comments are synthetic fixtures, not collected audience feedback. The packet supplies two supporting comments per question, but the claimed total of 212 comments and broader recurrence cannot be verified.",
+      "Source coverage is partial: captions failed after 1:40 except for one isolated caption at 2:46. Missing passages may contain answers or qualifications.",
+      "clip-results-vertical has no transcript and was excluded from match judgments and recommendations.",
+      "The eight-pound figure appears only in an audience comment and cannot establish the creator's actual result."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Real service HTTP fixture + browser. Synthetic comments/media/judgment; no live integration.",
+  "status": "complete",
+  "providerSubmitAttempts": 1,
+  "clipCount": 4,
+  "unverifiableClipRetained": true,
+  "sourceCoverage": "partial",
+  "refreshPreservesJob": true,
+  "browserErrors": []
+}

@@ -1,0 +1,14 @@
+# Credentials: never commit or package populated env files.
+.env
+.env.*
+!.env.example
+**/.env
+!**/.env.example
+# Local state and dependencies
+node_modules/
+data/
+*.log
+*.tmp
+.DS_Store
+# Stray scratch files that may contain credentials
+audience-research/Untitled

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "runId": "run_fixture_insufficient",
+  "mode": "fixture",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=FXnoqs00001",
+    "videoId": "FXnoqs00001",
+    "channelId": "UCfixtureQuietChannel001",
+    "title": "Ten Minutes of Rain on a Tin Roof"
+  },
+  "creatorGoal": null,
+  "researchStatus": "insufficient_evidence",
+  "coverage": {
+    "fetchedAt": "2026-10-01T12:00:00.000Z",
+    "videoIds": [
+      "FXnoqs00001",
+      "FXnoqs00003"
+    ],
+    "commentCount": 3,
+    "samplingMethod": "FIXTURE DATA (synthetic comments in the shape of YouTube Data API commentThreads.list), order=relevance, top-level comments only, up to 100 per video; source video plus up to 5 same-channel uploads chosen by heuristic-fixture-analyzer from the 2 most recent. Videos attempted: FXnoqs00001=ok(2), FXnoqs00002=comments_disabled(0), FXnoqs00003=ok(1). 3 comments fetched (3 distinct comment IDs); 3 eligible after removing 0 duplicate IDs/text, 0 spam and 0 empty comments.",
+    "limitations": [
+      "FIXTURE MODE: these are synthetic comments, not a real creator's audience.",
+      "Related video FXnoqs00002: Fixture status: comments_disabled",
+      "Only top-level comments were sampled; replies were not retrieved.",
+      "Insufficient evidence: none of the 3 retrieved comments contained a usable audience question or request. Agent notes: No comments looked like questions or requests."
+    ]
+  },
+  "evidence": [],
+  "questions": [],
+  "generationBrief": null
+}

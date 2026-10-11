@@ -1,0 +1,25 @@
+{
+  "runId": "fx-direct-answer",
+  "scenario": "direct answer",
+  "description": "clip-hunger explicitly answers how first-week hunger was handled (water + salt, gone by day six); clip-workout is unrelated.",
+  "status": "complete",
+  "verdicts": {
+    "q-hunger|clip-hunger": [
+      "direct"
+    ],
+    "q-hunger|clip-workout": [
+      "no_match"
+    ]
+  },
+  "answered": [
+    "q-hunger"
+  ],
+  "recommendations": {
+    "mustInclude": [
+      "clip-hunger"
+    ],
+    "mustExclude": [
+      "clip-workout"
+    ]
+  }
+}

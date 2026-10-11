@@ -1,0 +1,53 @@
+{
+  "runId": "fx-missing-transcripts",
+  "scenario": "missing and partial transcripts",
+  "description": "clip-results-vertical has no transcript (must be unverifiable). Source transcript is partial and lacks s17/s18, so a context warning for clip-safe may not cite them (a warning grounded in available text such as s03 is allowed). q-break-fast's answer (s10) is outside available coverage, so any source-absence claim must carry a partial-coverage caveat.",
+  "status": "complete",
+  "verdicts": {
+    "q-hunger|clip-hunger": [
+      "direct"
+    ],
+    "q-hunger|clip-results-vertical": [
+      "unverifiable"
+    ],
+    "q-weight|clip-results-vertical": [
+      "unverifiable"
+    ],
+    "q-safe-diabetes|clip-results-vertical": [
+      "unverifiable"
+    ],
+    "q-break-fast|clip-results-vertical": [
+      "unverifiable"
+    ],
+    "q-weight|clip-hunger": [
+      "no_match"
+    ],
+    "q-break-fast|clip-hunger": [
+      "no_match",
+      "related_only"
+    ]
+  },
+  "contextWarningMustNotCite": [
+    {
+      "pair": "q-safe-diabetes|clip-safe",
+      "ids": [
+        "s17",
+        "s18"
+      ]
+    }
+  ],
+  "unanswered": {
+    "q-weight": [
+      "not_found_in_generated_clips",
+      "not_found_in_available_source",
+      "cannot_assess"
+    ],
+    "q-break-fast": [
+      "not_found_in_generated_clips",
+      "not_found_in_available_source"
+    ]
+  },
+  "unansweredExplanationIncludes": {
+    "q-break-fast": "partial"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "provenance": {
+    "source": "hand-authored synthetic judgment for the integration fixture scenario (FXdemo00001); NOT recorded from a live model",
+    "authoredFor": "audience-research fixtures/exports/review-input.fixture.json (research -> Generate -> exported ReviewInput)",
+    "authoredAt": "2026-10-11T00:00:00.000Z",
+    "promptVersion": null,
+    "model": null
+  },
+  "binding": {
+    "packetHash": "d515912b42c36f89142ee40b167793d568c90c7a7243dfa05d3ad6b987a41026",
+    "handoff": "../audience-research/fixtures/exports/review-input.fixture.json",
+    "boundAt": "2026-10-11T22:18:08.722Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q_1",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "ev_1",
+          "ev_2",
+          "ev_3"
+        ],
+        "kindIssue": null,
+        "explanation": "All three comments ask which microphone is used for the voiceover."
+      },
+      {
+        "questionId": "q_2",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "ev_4",
+          "ev_5",
+          "ev_6"
+        ],
+        "kindIssue": null,
+        "explanation": "All three comments ask about the color grade; two of them specifically ask which LUT is used."
+      },
+      {
+        "questionId": "q_3",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "ev_7",
+          "ev_8"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments request a video about project file and folder organization. It is correctly labeled inferred because neither is phrased as a question."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q_1",
+        "clipId": "PFXf21c43208.CUfixmic01",
+        "verdict": "partial",
+        "explanation": "The creator says they record on a dynamic microphone about four inches away and describes the signal chain, but never names the microphone model the comments ask for.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "PFXf21c43208.CUfixmic01_r0_seg_3",
+            "quote": "I record voiceover on a dynamic microphone about four inches away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "The specific microphone brand or model is not stated anywhere in the clip."
+        ]
+      },
+      {
+        "questionId": "q_1",
+        "clipId": "PFXf21c43208.CUfixcol02",
+        "verdict": "no_match",
+        "explanation": "The clip is about color grading and does not mention microphones or voiceover.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_1",
+        "clipId": "PFXf21c43208.CUfixbat03",
+        "verdict": "no_match",
+        "explanation": "The clip is about batching edits and does not mention microphones.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_2",
+        "clipId": "PFXf21c43208.CUfixmic01",
+        "verdict": "no_match",
+        "explanation": "The clip covers voiceover recording, not color grading.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_2",
+        "clipId": "PFXf21c43208.CUfixcol02",
+        "verdict": "direct",
+        "explanation": "The creator lays out the grading process step by step: exposure and white balance, then contrast, then a creative LUT at about thirty percent intensity.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "PFXf21c43208.CUfixcol02_r0_seg_6",
+            "quote": "Color grading is three steps for me: fix exposure and white balance first, then contrast."
+          },
+          {
+            "clipTranscriptSegmentId": "PFXf21c43208.CUfixcol02_r1_seg_8",
+            "quote": "Last step is a creative LUT at about thirty percent intensity."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The clip skips the source passage between its two ranges where the creator explains keeping saturation natural to protect skin tones, which is part of the grading advice.",
+            "sourceSegmentIds": [
+              "seg_7"
+            ]
+          }
+        ],
+        "limitations": [
+          "Commenters also asked which LUT it is; the clip does not name the LUT."
+        ]
+      },
+      {
+        "questionId": "q_2",
+        "clipId": "PFXf21c43208.CUfixbat03",
+        "verdict": "no_match",
+        "explanation": "The clip is about batching edits, not color grading.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_3",
+        "clipId": "PFXf21c43208.CUfixmic01",
+        "verdict": "no_match",
+        "explanation": "The clip does not discuss project files or folders.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_3",
+        "clipId": "PFXf21c43208.CUfixcol02",
+        "verdict": "no_match",
+        "explanation": "The clip does not discuss project files or folders.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q_3",
+        "clipId": "PFXf21c43208.CUfixbat03",
+        "verdict": "related_only",
+        "explanation": "The clip is about editing workflow efficiency (batching), which is adjacent to project organization but says nothing about files or folders.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "PFXf21c43208.CUfixcol02",
+        "questionIds": [
+          "q_2"
+        ],
+        "reason": "It walks through the full grading process that three commenters asked about. Consider restoring the skipped saturation step, and note that it does not name the LUT."
+      },
+      {
+        "rank": 2,
+        "clipId": "PFXf21c43208.CUfixmic01",
+        "questionIds": [
+          "q_1"
+        ],
+        "reason": "It explains the voiceover setup three commenters asked about, but only names the microphone type, not the model; add the model name in a caption or pinned comment."
+      }
+    ],
+    "unansweredQuestions": [
+      {
+        "questionId": "q_3",
+        "status": "not_found_in_generated_clips",
+        "explanation": "No generated clip covers project file or folder organization. The source transcript briefly mentions sorting footage into a project folder with subfolders (seg_1), so a short clip could be cut from that passage, but it is only a one-line mention, not the tour commenters asked for."
+      }
+    ],
+    "limitations": [
+      "The comments are synthetic fixtures, not real audience feedback.",
+      "One generated clip has no verified source ranges or transcript and could not be assessed."
+    ]
+  }
+}

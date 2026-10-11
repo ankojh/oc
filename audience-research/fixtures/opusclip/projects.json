@@ -1,0 +1,1366 @@
+{
+  "FXdemo00001": {
+    "sourceVideoId": "FXdemo00001",
+    "clips": [
+      {
+        "curationId": "CUfixmic01",
+        "title": "The mic behind my voiceovers",
+        "description": "",
+        "durationMs": 53500,
+        "timeRanges": [
+          [
+            245000,
+            298500
+          ]
+        ],
+        "uriForPreview": "https://fixtures.invalid/opusclip/CUfixmic01/preview.mp4",
+        "uriForExport": "https://fixtures.invalid/opusclip/CUfixmic01/export.mp4",
+        "genre": "Auto",
+        "createdAt": "2026-10-01T12:30:00.000Z"
+      },
+      {
+        "curationId": "CUfixcol02",
+        "title": "My color grade in 3 steps",
+        "description": "",
+        "durationMs": 53500,
+        "timeRanges": [
+          [
+            512000,
+            540000
+          ],
+          [
+            575500,
+            601000
+          ]
+        ],
+        "uriForPreview": "https://fixtures.invalid/opusclip/CUfixcol02/preview.mp4",
+        "uriForExport": "https://fixtures.invalid/opusclip/CUfixcol02/export.mp4",
+        "genre": "Auto",
+        "createdAt": "2026-10-01T12:30:00.000Z"
+      },
+      {
+        "curationId": "CUfixbat03",
+        "title": "Why I batch my edits",
+        "description": "",
+        "durationMs": 49000,
+        "timeRanges": [
+          [
+            812000,
+            861000
+          ]
+        ],
+        "uriForPreview": "https://fixtures.invalid/opusclip/CUfixbat03/preview.mp4",
+        "uriForExport": "https://fixtures.invalid/opusclip/CUfixbat03/export.mp4",
+        "genre": "Auto",
+        "createdAt": "2026-10-01T12:30:00.000Z"
+      },
+      {
+        "curationId": "CUfixnor04",
+        "title": "Channel intro",
+        "description": "",
+        "durationMs": 30000,
+        "timeRanges": null,
+        "uriForPreview": "https://fixtures.invalid/opusclip/CUfixnor04/preview.mp4",
+        "uriForExport": null,
+        "genre": "Auto",
+        "createdAt": "2026-10-01T12:30:00.000Z"
+      }
+    ],
+    "transcript": {
+      "data": [
+        [
+          {
+            "id": 0,
+            "start": 0,
+            "end": 42,
+            "text": "Hey everyone, today I'm walking through my full editing workflow from import to export.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Hey",
+                "start": 0,
+                "end": 3,
+                "isFillerWord": false
+              },
+              {
+                "word": "everyone,",
+                "start": 3,
+                "end": 6,
+                "isFillerWord": false
+              },
+              {
+                "word": "today",
+                "start": 6,
+                "end": 9,
+                "isFillerWord": false
+              },
+              {
+                "word": "I'm",
+                "start": 9,
+                "end": 12,
+                "isFillerWord": false
+              },
+              {
+                "word": "walking",
+                "start": 12,
+                "end": 15,
+                "isFillerWord": false
+              },
+              {
+                "word": "through",
+                "start": 15,
+                "end": 18,
+                "isFillerWord": false
+              },
+              {
+                "word": "my",
+                "start": 18,
+                "end": 21,
+                "isFillerWord": false
+              },
+              {
+                "word": "full",
+                "start": 21,
+                "end": 24,
+                "isFillerWord": false
+              },
+              {
+                "word": "editing",
+                "start": 24,
+                "end": 27,
+                "isFillerWord": false
+              },
+              {
+                "word": "workflow",
+                "start": 27,
+                "end": 30,
+                "isFillerWord": false
+              },
+              {
+                "word": "from",
+                "start": 30,
+                "end": 33,
+                "isFillerWord": false
+              },
+              {
+                "word": "import",
+                "start": 33,
+                "end": 36,
+                "isFillerWord": false
+              },
+              {
+                "word": "to",
+                "start": 36,
+                "end": 39,
+                "isFillerWord": false
+              },
+              {
+                "word": "export.",
+                "start": 39,
+                "end": 42,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 1,
+            "start": 42,
+            "end": 120,
+            "text": "First I sort all footage into a project folder with subfolders for a-roll, b-roll, audio and graphics.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "First",
+                "start": 42,
+                "end": 46.588,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 46.588,
+                "end": 51.176,
+                "isFillerWord": false
+              },
+              {
+                "word": "sort",
+                "start": 51.176,
+                "end": 55.765,
+                "isFillerWord": false
+              },
+              {
+                "word": "all",
+                "start": 55.765,
+                "end": 60.353,
+                "isFillerWord": false
+              },
+              {
+                "word": "footage",
+                "start": 60.353,
+                "end": 64.941,
+                "isFillerWord": false
+              },
+              {
+                "word": "into",
+                "start": 64.941,
+                "end": 69.529,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 69.529,
+                "end": 74.118,
+                "isFillerWord": false
+              },
+              {
+                "word": "project",
+                "start": 74.118,
+                "end": 78.706,
+                "isFillerWord": false
+              },
+              {
+                "word": "folder",
+                "start": 78.706,
+                "end": 83.294,
+                "isFillerWord": false
+              },
+              {
+                "word": "with",
+                "start": 83.294,
+                "end": 87.882,
+                "isFillerWord": false
+              },
+              {
+                "word": "subfolders",
+                "start": 87.882,
+                "end": 92.471,
+                "isFillerWord": false
+              },
+              {
+                "word": "for",
+                "start": 92.471,
+                "end": 97.059,
+                "isFillerWord": false
+              },
+              {
+                "word": "a-roll,",
+                "start": 97.059,
+                "end": 101.647,
+                "isFillerWord": false
+              },
+              {
+                "word": "b-roll,",
+                "start": 101.647,
+                "end": 106.235,
+                "isFillerWord": false
+              },
+              {
+                "word": "audio",
+                "start": 106.235,
+                "end": 110.824,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 110.824,
+                "end": 115.412,
+                "isFillerWord": false
+              },
+              {
+                "word": "graphics.",
+                "start": 115.412,
+                "end": 120,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "start": 120,
+            "end": 240,
+            "text": "Then I do a rough cut on the timeline, removing pauses and anything that drags.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Then",
+                "start": 120,
+                "end": 128,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 128,
+                "end": 136,
+                "isFillerWord": false
+              },
+              {
+                "word": "do",
+                "start": 136,
+                "end": 144,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 144,
+                "end": 152,
+                "isFillerWord": false
+              },
+              {
+                "word": "rough",
+                "start": 152,
+                "end": 160,
+                "isFillerWord": false
+              },
+              {
+                "word": "cut",
+                "start": 160,
+                "end": 168,
+                "isFillerWord": false
+              },
+              {
+                "word": "on",
+                "start": 168,
+                "end": 176,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 176,
+                "end": 184,
+                "isFillerWord": false
+              },
+              {
+                "word": "timeline,",
+                "start": 184,
+                "end": 192,
+                "isFillerWord": false
+              },
+              {
+                "word": "removing",
+                "start": 192,
+                "end": 200,
+                "isFillerWord": false
+              },
+              {
+                "word": "pauses",
+                "start": 200,
+                "end": 208,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 208,
+                "end": 216,
+                "isFillerWord": false
+              },
+              {
+                "word": "anything",
+                "start": 216,
+                "end": 224,
+                "isFillerWord": false
+              },
+              {
+                "word": "that",
+                "start": 224,
+                "end": 232,
+                "isFillerWord": false
+              },
+              {
+                "word": "drags.",
+                "start": 232,
+                "end": 240,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "start": 245,
+            "end": 272,
+            "text": "A lot of you ask about my voice, so here it is: I record voiceover on a dynamic microphone about four inches away.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "A",
+                "start": 245,
+                "end": 246.174,
+                "isFillerWord": false
+              },
+              {
+                "word": "lot",
+                "start": 246.174,
+                "end": 247.348,
+                "isFillerWord": false
+              },
+              {
+                "word": "of",
+                "start": 247.348,
+                "end": 248.522,
+                "isFillerWord": false
+              },
+              {
+                "word": "you",
+                "start": 248.522,
+                "end": 249.696,
+                "isFillerWord": false
+              },
+              {
+                "word": "ask",
+                "start": 249.696,
+                "end": 250.87,
+                "isFillerWord": false
+              },
+              {
+                "word": "about",
+                "start": 250.87,
+                "end": 252.043,
+                "isFillerWord": false
+              },
+              {
+                "word": "my",
+                "start": 252.043,
+                "end": 253.217,
+                "isFillerWord": false
+              },
+              {
+                "word": "voice,",
+                "start": 253.217,
+                "end": 254.391,
+                "isFillerWord": false
+              },
+              {
+                "word": "so",
+                "start": 254.391,
+                "end": 255.565,
+                "isFillerWord": false
+              },
+              {
+                "word": "here",
+                "start": 255.565,
+                "end": 256.739,
+                "isFillerWord": false
+              },
+              {
+                "word": "it",
+                "start": 256.739,
+                "end": 257.913,
+                "isFillerWord": false
+              },
+              {
+                "word": "is:",
+                "start": 257.913,
+                "end": 259.087,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 259.087,
+                "end": 260.261,
+                "isFillerWord": false
+              },
+              {
+                "word": "record",
+                "start": 260.261,
+                "end": 261.435,
+                "isFillerWord": false
+              },
+              {
+                "word": "voiceover",
+                "start": 261.435,
+                "end": 262.609,
+                "isFillerWord": false
+              },
+              {
+                "word": "on",
+                "start": 262.609,
+                "end": 263.783,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 263.783,
+                "end": 264.957,
+                "isFillerWord": false
+              },
+              {
+                "word": "dynamic",
+                "start": 264.957,
+                "end": 266.13,
+                "isFillerWord": false
+              },
+              {
+                "word": "microphone",
+                "start": 266.13,
+                "end": 267.304,
+                "isFillerWord": false
+              },
+              {
+                "word": "about",
+                "start": 267.304,
+                "end": 268.478,
+                "isFillerWord": false
+              },
+              {
+                "word": "four",
+                "start": 268.478,
+                "end": 269.652,
+                "isFillerWord": false
+              },
+              {
+                "word": "inches",
+                "start": 269.652,
+                "end": 270.826,
+                "isFillerWord": false
+              },
+              {
+                "word": "away.",
+                "start": 270.826,
+                "end": 272,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "start": 272,
+            "end": 298.5,
+            "text": "It goes into a simple audio interface, and I add light compression and a high-pass filter in the edit.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "It",
+                "start": 272,
+                "end": 273.395,
+                "isFillerWord": false
+              },
+              {
+                "word": "goes",
+                "start": 273.395,
+                "end": 274.789,
+                "isFillerWord": false
+              },
+              {
+                "word": "into",
+                "start": 274.789,
+                "end": 276.184,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 276.184,
+                "end": 277.579,
+                "isFillerWord": false
+              },
+              {
+                "word": "simple",
+                "start": 277.579,
+                "end": 278.974,
+                "isFillerWord": false
+              },
+              {
+                "word": "audio",
+                "start": 278.974,
+                "end": 280.368,
+                "isFillerWord": false
+              },
+              {
+                "word": "interface,",
+                "start": 280.368,
+                "end": 281.763,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 281.763,
+                "end": 283.158,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 283.158,
+                "end": 284.553,
+                "isFillerWord": false
+              },
+              {
+                "word": "add",
+                "start": 284.553,
+                "end": 285.947,
+                "isFillerWord": false
+              },
+              {
+                "word": "light",
+                "start": 285.947,
+                "end": 287.342,
+                "isFillerWord": false
+              },
+              {
+                "word": "compression",
+                "start": 287.342,
+                "end": 288.737,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 288.737,
+                "end": 290.132,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 290.132,
+                "end": 291.526,
+                "isFillerWord": false
+              },
+              {
+                "word": "high-pass",
+                "start": 291.526,
+                "end": 292.921,
+                "isFillerWord": false
+              },
+              {
+                "word": "filter",
+                "start": 292.921,
+                "end": 294.316,
+                "isFillerWord": false
+              },
+              {
+                "word": "in",
+                "start": 294.316,
+                "end": 295.711,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 295.711,
+                "end": 297.105,
+                "isFillerWord": false
+              },
+              {
+                "word": "edit.",
+                "start": 297.105,
+                "end": 298.5,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "start": 300,
+            "end": 505,
+            "text": "Next comes b-roll. I lay it over the a-roll and keep each shot under four seconds.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Next",
+                "start": 300,
+                "end": 312.813,
+                "isFillerWord": false
+              },
+              {
+                "word": "comes",
+                "start": 312.813,
+                "end": 325.625,
+                "isFillerWord": false
+              },
+              {
+                "word": "b-roll.",
+                "start": 325.625,
+                "end": 338.438,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 338.438,
+                "end": 351.25,
+                "isFillerWord": false
+              },
+              {
+                "word": "lay",
+                "start": 351.25,
+                "end": 364.063,
+                "isFillerWord": false
+              },
+              {
+                "word": "it",
+                "start": 364.063,
+                "end": 376.875,
+                "isFillerWord": false
+              },
+              {
+                "word": "over",
+                "start": 376.875,
+                "end": 389.688,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 389.688,
+                "end": 402.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "a-roll",
+                "start": 402.5,
+                "end": 415.313,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 415.313,
+                "end": 428.125,
+                "isFillerWord": false
+              },
+              {
+                "word": "keep",
+                "start": 428.125,
+                "end": 440.938,
+                "isFillerWord": false
+              },
+              {
+                "word": "each",
+                "start": 440.938,
+                "end": 453.75,
+                "isFillerWord": false
+              },
+              {
+                "word": "shot",
+                "start": 453.75,
+                "end": 466.563,
+                "isFillerWord": false
+              },
+              {
+                "word": "under",
+                "start": 466.563,
+                "end": 479.375,
+                "isFillerWord": false
+              },
+              {
+                "word": "four",
+                "start": 479.375,
+                "end": 492.188,
+                "isFillerWord": false
+              },
+              {
+                "word": "seconds.",
+                "start": 492.188,
+                "end": 505,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "start": 512,
+            "end": 540,
+            "text": "Color grading is three steps for me: fix exposure and white balance first, then contrast.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Color",
+                "start": 512,
+                "end": 513.867,
+                "isFillerWord": false
+              },
+              {
+                "word": "grading",
+                "start": 513.867,
+                "end": 515.733,
+                "isFillerWord": false
+              },
+              {
+                "word": "is",
+                "start": 515.733,
+                "end": 517.6,
+                "isFillerWord": false
+              },
+              {
+                "word": "three",
+                "start": 517.6,
+                "end": 519.467,
+                "isFillerWord": false
+              },
+              {
+                "word": "steps",
+                "start": 519.467,
+                "end": 521.333,
+                "isFillerWord": false
+              },
+              {
+                "word": "for",
+                "start": 521.333,
+                "end": 523.2,
+                "isFillerWord": false
+              },
+              {
+                "word": "me:",
+                "start": 523.2,
+                "end": 525.067,
+                "isFillerWord": false
+              },
+              {
+                "word": "fix",
+                "start": 525.067,
+                "end": 526.933,
+                "isFillerWord": false
+              },
+              {
+                "word": "exposure",
+                "start": 526.933,
+                "end": 528.8,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 528.8,
+                "end": 530.667,
+                "isFillerWord": false
+              },
+              {
+                "word": "white",
+                "start": 530.667,
+                "end": 532.533,
+                "isFillerWord": false
+              },
+              {
+                "word": "balance",
+                "start": 532.533,
+                "end": 534.4,
+                "isFillerWord": false
+              },
+              {
+                "word": "first,",
+                "start": 534.4,
+                "end": 536.267,
+                "isFillerWord": false
+              },
+              {
+                "word": "then",
+                "start": 536.267,
+                "end": 538.133,
+                "isFillerWord": false
+              },
+              {
+                "word": "contrast.",
+                "start": 538.133,
+                "end": 540,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "start": 540,
+            "end": 575,
+            "text": "I keep saturation natural here because skin tones break easily.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "I",
+                "start": 540,
+                "end": 543.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "keep",
+                "start": 543.5,
+                "end": 547,
+                "isFillerWord": false
+              },
+              {
+                "word": "saturation",
+                "start": 547,
+                "end": 550.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "natural",
+                "start": 550.5,
+                "end": 554,
+                "isFillerWord": false
+              },
+              {
+                "word": "here",
+                "start": 554,
+                "end": 557.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "because",
+                "start": 557.5,
+                "end": 561,
+                "isFillerWord": false
+              },
+              {
+                "word": "skin",
+                "start": 561,
+                "end": 564.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "tones",
+                "start": 564.5,
+                "end": 568,
+                "isFillerWord": false
+              },
+              {
+                "word": "break",
+                "start": 568,
+                "end": 571.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "easily.",
+                "start": 571.5,
+                "end": 575,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "start": 575.5,
+            "end": 601,
+            "text": "Last step is a creative LUT at about thirty percent intensity. That's the whole look.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Last",
+                "start": 575.5,
+                "end": 577.2,
+                "isFillerWord": false
+              },
+              {
+                "word": "step",
+                "start": 577.2,
+                "end": 578.9,
+                "isFillerWord": false
+              },
+              {
+                "word": "is",
+                "start": 578.9,
+                "end": 580.6,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 580.6,
+                "end": 582.3,
+                "isFillerWord": false
+              },
+              {
+                "word": "creative",
+                "start": 582.3,
+                "end": 584,
+                "isFillerWord": false
+              },
+              {
+                "word": "LUT",
+                "start": 584,
+                "end": 585.7,
+                "isFillerWord": false
+              },
+              {
+                "word": "at",
+                "start": 585.7,
+                "end": 587.4,
+                "isFillerWord": false
+              },
+              {
+                "word": "about",
+                "start": 587.4,
+                "end": 589.1,
+                "isFillerWord": false
+              },
+              {
+                "word": "thirty",
+                "start": 589.1,
+                "end": 590.8,
+                "isFillerWord": false
+              },
+              {
+                "word": "percent",
+                "start": 590.8,
+                "end": 592.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "intensity.",
+                "start": 592.5,
+                "end": 594.2,
+                "isFillerWord": false
+              },
+              {
+                "word": "That's",
+                "start": 594.2,
+                "end": 595.9,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 595.9,
+                "end": 597.6,
+                "isFillerWord": false
+              },
+              {
+                "word": "whole",
+                "start": 597.6,
+                "end": 599.3,
+                "isFillerWord": false
+              },
+              {
+                "word": "look.",
+                "start": 599.3,
+                "end": 601,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "start": 601,
+            "end": 810,
+            "text": "Then sound design: music ducking, a few whooshes, and a loudness pass to minus fourteen LUFS.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Then",
+                "start": 601,
+                "end": 614.063,
+                "isFillerWord": false
+              },
+              {
+                "word": "sound",
+                "start": 614.063,
+                "end": 627.125,
+                "isFillerWord": false
+              },
+              {
+                "word": "design:",
+                "start": 627.125,
+                "end": 640.188,
+                "isFillerWord": false
+              },
+              {
+                "word": "music",
+                "start": 640.188,
+                "end": 653.25,
+                "isFillerWord": false
+              },
+              {
+                "word": "ducking,",
+                "start": 653.25,
+                "end": 666.313,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 666.313,
+                "end": 679.375,
+                "isFillerWord": false
+              },
+              {
+                "word": "few",
+                "start": 679.375,
+                "end": 692.438,
+                "isFillerWord": false
+              },
+              {
+                "word": "whooshes,",
+                "start": 692.438,
+                "end": 705.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 705.5,
+                "end": 718.563,
+                "isFillerWord": false
+              },
+              {
+                "word": "a",
+                "start": 718.563,
+                "end": 731.625,
+                "isFillerWord": false
+              },
+              {
+                "word": "loudness",
+                "start": 731.625,
+                "end": 744.688,
+                "isFillerWord": false
+              },
+              {
+                "word": "pass",
+                "start": 744.688,
+                "end": 757.75,
+                "isFillerWord": false
+              },
+              {
+                "word": "to",
+                "start": 757.75,
+                "end": 770.813,
+                "isFillerWord": false
+              },
+              {
+                "word": "minus",
+                "start": 770.813,
+                "end": 783.875,
+                "isFillerWord": false
+              },
+              {
+                "word": "fourteen",
+                "start": 783.875,
+                "end": 796.938,
+                "isFillerWord": false
+              },
+              {
+                "word": "LUFS.",
+                "start": 796.938,
+                "end": 810,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "start": 812,
+            "end": 861,
+            "text": "The real speed trick is batching: I edit three videos in one sitting, so I stay in the same mindset.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "The",
+                "start": 812,
+                "end": 814.45,
+                "isFillerWord": false
+              },
+              {
+                "word": "real",
+                "start": 814.45,
+                "end": 816.9,
+                "isFillerWord": false
+              },
+              {
+                "word": "speed",
+                "start": 816.9,
+                "end": 819.35,
+                "isFillerWord": false
+              },
+              {
+                "word": "trick",
+                "start": 819.35,
+                "end": 821.8,
+                "isFillerWord": false
+              },
+              {
+                "word": "is",
+                "start": 821.8,
+                "end": 824.25,
+                "isFillerWord": false
+              },
+              {
+                "word": "batching:",
+                "start": 824.25,
+                "end": 826.7,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 826.7,
+                "end": 829.15,
+                "isFillerWord": false
+              },
+              {
+                "word": "edit",
+                "start": 829.15,
+                "end": 831.6,
+                "isFillerWord": false
+              },
+              {
+                "word": "three",
+                "start": 831.6,
+                "end": 834.05,
+                "isFillerWord": false
+              },
+              {
+                "word": "videos",
+                "start": 834.05,
+                "end": 836.5,
+                "isFillerWord": false
+              },
+              {
+                "word": "in",
+                "start": 836.5,
+                "end": 838.95,
+                "isFillerWord": false
+              },
+              {
+                "word": "one",
+                "start": 838.95,
+                "end": 841.4,
+                "isFillerWord": false
+              },
+              {
+                "word": "sitting,",
+                "start": 841.4,
+                "end": 843.85,
+                "isFillerWord": false
+              },
+              {
+                "word": "so",
+                "start": 843.85,
+                "end": 846.3,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 846.3,
+                "end": 848.75,
+                "isFillerWord": false
+              },
+              {
+                "word": "stay",
+                "start": 848.75,
+                "end": 851.2,
+                "isFillerWord": false
+              },
+              {
+                "word": "in",
+                "start": 851.2,
+                "end": 853.65,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 853.65,
+                "end": 856.1,
+                "isFillerWord": false
+              },
+              {
+                "word": "same",
+                "start": 856.1,
+                "end": 858.55,
+                "isFillerWord": false
+              },
+              {
+                "word": "mindset.",
+                "start": 858.55,
+                "end": 861,
+                "isFillerWord": false
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "start": 861,
+            "end": 1075,
+            "text": "Finally I export with the YouTube preset and do one full watch-through before uploading. Thanks for watching.",
+            "speaker": "SPEAKER_00",
+            "words": [
+              {
+                "word": "Finally",
+                "start": 861,
+                "end": 873.588,
+                "isFillerWord": false
+              },
+              {
+                "word": "I",
+                "start": 873.588,
+                "end": 886.176,
+                "isFillerWord": false
+              },
+              {
+                "word": "export",
+                "start": 886.176,
+                "end": 898.765,
+                "isFillerWord": false
+              },
+              {
+                "word": "with",
+                "start": 898.765,
+                "end": 911.353,
+                "isFillerWord": false
+              },
+              {
+                "word": "the",
+                "start": 911.353,
+                "end": 923.941,
+                "isFillerWord": false
+              },
+              {
+                "word": "YouTube",
+                "start": 923.941,
+                "end": 936.529,
+                "isFillerWord": false
+              },
+              {
+                "word": "preset",
+                "start": 936.529,
+                "end": 949.118,
+                "isFillerWord": false
+              },
+              {
+                "word": "and",
+                "start": 949.118,
+                "end": 961.706,
+                "isFillerWord": false
+              },
+              {
+                "word": "do",
+                "start": 961.706,
+                "end": 974.294,
+                "isFillerWord": false
+              },
+              {
+                "word": "one",
+                "start": 974.294,
+                "end": 986.882,
+                "isFillerWord": false
+              },
+              {
+                "word": "full",
+                "start": 986.882,
+                "end": 999.471,
+                "isFillerWord": false
+              },
+              {
+                "word": "watch-through",
+                "start": 999.471,
+                "end": 1012.059,
+                "isFillerWord": false
+              },
+              {
+                "word": "before",
+                "start": 1012.059,
+                "end": 1024.647,
+                "isFillerWord": false
+              },
+              {
+                "word": "uploading.",
+                "start": 1024.647,
+                "end": 1037.235,
+                "isFillerWord": false
+              },
+              {
+                "word": "Thanks",
+                "start": 1037.235,
+                "end": 1049.824,
+                "isFillerWord": false
+              },
+              {
+                "word": "for",
+                "start": 1049.824,
+                "end": 1062.412,
+                "isFillerWord": false
+              },
+              {
+                "word": "watching.",
+                "start": 1062.412,
+                "end": 1075,
+                "isFillerWord": false
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

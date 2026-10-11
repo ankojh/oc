@@ -1,0 +1,104 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "runId": "run_fixture_demo",
+  "mode": "fixture",
+  "status": "complete",
+  "matches": [
+    {
+      "questionId": "q_1",
+      "clipId": "PFXf21c43208.CUfixmic01",
+      "verdict": "partial",
+      "explanation": "The passage describes a dynamic microphone, distance and processing, but does not identify a microphone model.",
+      "commentEvidenceIds": [
+        "ev_1",
+        "ev_2",
+        "ev_3"
+      ],
+      "answerPassages": [
+        {
+          "clipTranscriptSegmentId": "PFXf21c43208.CUfixmic01_r0_seg_3",
+          "quote": "A lot of you ask about my voice, so here it is: I record voiceover on a dynamic microphone about four inches away.",
+          "sourceStartMs": 245000,
+          "sourceEndMs": 272000
+        },
+        {
+          "clipTranscriptSegmentId": "PFXf21c43208.CUfixmic01_r0_seg_4",
+          "quote": "It goes into a simple audio interface, and I add light compression and a high-pass filter in the edit.",
+          "sourceStartMs": 272000,
+          "sourceEndMs": 298500
+        }
+      ],
+      "contextWarnings": [],
+      "limitations": [
+        "The exact microphone model is not named in the available passage."
+      ]
+    },
+    {
+      "questionId": "q_2",
+      "clipId": "PFXf21c43208.CUfixcol02",
+      "verdict": "partial",
+      "explanation": "The clip covers exposure, white balance, contrast and a creative LUT. It omits the source passage about keeping saturation natural.",
+      "commentEvidenceIds": [
+        "ev_4",
+        "ev_5",
+        "ev_6"
+      ],
+      "answerPassages": [
+        {
+          "clipTranscriptSegmentId": "PFXf21c43208.CUfixcol02_r0_seg_6",
+          "quote": "Color grading is three steps for me: fix exposure and white balance first, then contrast.",
+          "sourceStartMs": 512000,
+          "sourceEndMs": 540000
+        },
+        {
+          "clipTranscriptSegmentId": "PFXf21c43208.CUfixcol02_r1_seg_8",
+          "quote": "Last step is a creative LUT at about thirty percent intensity. That's the whole look.",
+          "sourceStartMs": 575500,
+          "sourceEndMs": 601000
+        }
+      ],
+      "contextWarnings": [
+        {
+          "explanation": "The selected clip omits the saturation step from source segment seg_7.",
+          "sourceSegmentIds": [
+            "seg_7"
+          ]
+        }
+      ],
+      "limitations": [
+        "Two noncontiguous source ranges; source times are not clip playback times."
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "rank": 1,
+      "clipId": "PFXf21c43208.CUfixmic01",
+      "questionIds": [
+        "q_1"
+      ],
+      "reason": "A useful partial answer about the microphone setup; no model is specified."
+    },
+    {
+      "rank": 2,
+      "clipId": "PFXf21c43208.CUfixcol02",
+      "questionIds": [
+        "q_2"
+      ],
+      "reason": "A partial walkthrough of the color grade, with the missing saturation step disclosed."
+    }
+  ],
+  "unansweredQuestions": [
+    {
+      "questionId": "q_3",
+      "status": "not_found_in_generated_clips",
+      "explanation": "The available source describes folders, but no generated clip contains that passage. Partial source coverage cannot establish absence from the entire video."
+    }
+  ],
+  "limitations": [
+    "HAND-AUTHORED SAMPLE JUDGMENT: storyboard for the marketing interaction; not a recorded agent review and not live OpusClip output.",
+    "Synthetic comments, transcript and clips from the existing editing-workflow fixture. No real creator is represented.",
+    "Source transcript coverage is partial/unknown; the complete video was not verified.",
+    "The Channel intro clip has no verified ranges or transcript and remains unverifiable."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:49.222Z",
+    "threadId": "01a12cc9-ee5b-7e00-b36c-e2b56817495a"
+  },
+  "binding": {
+    "packetHash": "a342964e522fa6cf0c95af31b697b4d53e284d3e1bd761b2b0ec6202cba45732",
+    "handoff": "fixtures/inputs/10-no-useful-matches.json",
+    "boundAt": "2026-10-11T21:28:54.712Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-break-fast",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e03",
+          "e04"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments explicitly ask what the creator ate to break the fast or for the first meal. The two supplied comments support the claimed count."
+      },
+      {
+        "questionId": "q-coffee",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e14"
+        ],
+        "kindIssue": null,
+        "explanation": "The supplied comment explicitly asks whether black coffee is allowed while fasting, supporting the claimed count of one."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-break-fast",
+        "clipId": "clip-workout",
+        "verdict": "no_match",
+        "explanation": "The clip discusses workout timing and strength retention. It does not identify what the creator ate to break the fast.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-coffee",
+        "clipId": "clip-workout",
+        "verdict": "no_match",
+        "explanation": "The clip discusses lifting during the eating window and contains no information about coffee during fasting.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [],
+    "unansweredQuestions": [
+      {
+        "questionId": "q-break-fast",
+        "status": "not_found_in_generated_clips",
+        "explanation": "The source answers this in s10 (100000–112000 ms): the creator usually had two eggs, Greek yogurt with berries, and water around twelve fifteen. That passage is absent from the generated clip."
+      },
+      {
+        "questionId": "q-coffee",
+        "status": "not_found_in_available_source",
+        "explanation": "The provided full source transcript contains no answer about black coffee while fasting."
+      }
+    ],
+    "limitations": [
+      "The comments are synthetic fixtures, not collected audience feedback. The cited evidence supports the question wording but cannot establish real audience demand or verify the reported total of 212 comments."
+    ]
+  }
+}

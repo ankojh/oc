@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "research": {
+    "schemaVersion": "audience-clips.v1",
+    "runId": "fx-misleading-omission",
+    "mode": "fixture",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=fxIF30days",
+      "videoId": "fxIF30days",
+      "channelId": "UCfixtureMaya",
+      "title": "I Tried Intermittent Fasting for 30 Days (Honest Results)"
+    },
+    "creatorGoal": "Make shorts that answer the questions my viewers keep asking, without overselling results.",
+    "researchStatus": "ready",
+    "coverage": {
+      "fetchedAt": "2026-09-08T00:00:00Z",
+      "videoIds": [
+        "fxIF30days"
+      ],
+      "commentCount": 212,
+      "samplingMethod": "fixture: hand-written synthetic comments",
+      "limitations": [
+        "Synthetic fixture comments; not collected from YouTube."
+      ]
+    },
+    "evidence": [
+      {
+        "id": "e07",
+        "commentId": "Ugx_fixture_e07",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e07",
+        "quote": "is this safe for diabetics? my dad wants to try it after watching this",
+        "publishedAt": "2026-09-04T11:30:00Z"
+      },
+      {
+        "id": "e08",
+        "commentId": "Ugx_fixture_e08",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e08",
+        "quote": "I'm type 2 diabetic, would this be ok for me?",
+        "publishedAt": "2026-09-04T12:02:18Z"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-safe-diabetes",
+        "question": "Is intermittent fasting safe for people with diabetes?",
+        "kind": "explicit",
+        "evidenceIds": [
+          "e07",
+          "e08"
+        ],
+        "observedCommentCount": 2,
+        "priority": 1,
+        "rationale": "Two commenters asked about diabetes safety."
+      }
+    ],
+    "generationBrief": {
+      "targetQuestionIds": [
+        "q-safe-diabetes"
+      ],
+      "customPrompt": "Make clips that answer: Is intermittent fasting safe for people with diabetes?",
+      "durationSec": [
+        15,
+        60
+      ],
+      "aspectRatio": "portrait"
+    }
+  },
+  "generation": {
+    "provider": "opusclip",
+    "projectId": "fixture-project-fx-misleading-omission",
+    "requestedQuestionIds": [
+      "q-safe-diabetes"
+    ],
+    "submittedPrompt": "Make clips that answer: Is intermittent fasting safe for people with diabetes?",
+    "completedAt": "2026-09-08T01:00:00Z"
+  },
+  "sourceTranscript": {
+    "coverage": "full",
+    "segments": [
+      {
+        "id": "s01",
+        "startMs": 0,
+        "endMs": 9000,
+        "text": "Hey everyone, today I'm sharing my honest results from thirty days of sixteen-eight intermittent fasting."
+      },
+      {
+        "id": "s02",
+        "startMs": 9000,
+        "endMs": 18000,
+        "text": "Sixteen-eight means I ate everything within an eight hour window, from noon to eight p.m., and fasted the other sixteen hours."
+      },
+      {
+        "id": "s03",
+        "startMs": 18000,
+        "endMs": 30000,
+        "text": "Before I started I talked to my doctor, because I take medication for blood pressure, and she was fine with it as long as I tracked how I felt."
+      },
+      {
+        "id": "s04",
+        "startMs": 30000,
+        "endMs": 42000,
+        "text": "The first week was rough. I was genuinely hungry every morning around ten, and by day three I had a headache most afternoons."
+      },
+      {
+        "id": "s05",
+        "startMs": 42000,
+        "endMs": 54000,
+        "text": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+      },
+      {
+        "id": "s06",
+        "startMs": 54000,
+        "endMs": 64000,
+        "text": "Energy-wise, I was tired the first few days, but in week two I actually felt more focused in the mornings than before."
+      },
+      {
+        "id": "s07",
+        "startMs": 64000,
+        "endMs": 76000,
+        "text": "A lot of you asked about the eating window, so I want to talk about timing for a second."
+      },
+      {
+        "id": "s08",
+        "startMs": 76000,
+        "endMs": 88000,
+        "text": "I picked noon to eight because it fits my work schedule, and dinner with my family is at seven, so I never had to skip it."
+      },
+      {
+        "id": "s09",
+        "startMs": 88000,
+        "endMs": 100000,
+        "text": "Some people do ten to six instead, and honestly the exact window matters less than being consistent every day."
+      },
+      {
+        "id": "s10",
+        "startMs": 100000,
+        "endMs": 112000,
+        "text": "To break my fast I usually had two eggs, Greek yogurt with berries, and a big glass of water, around twelve fifteen."
+      },
+      {
+        "id": "s11",
+        "startMs": 112000,
+        "endMs": 122000,
+        "text": "I avoided breaking the fast with something sugary because the one time I had a pastry I crashed hard an hour later."
+      },
+      {
+        "id": "s12",
+        "startMs": 122000,
+        "endMs": 134000,
+        "text": "Okay, results. I started at one hundred eighty two pounds and on day thirty I weighed one hundred seventy four."
+      },
+      {
+        "id": "s13",
+        "startMs": 134000,
+        "endMs": 144000,
+        "text": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+      },
+      {
+        "id": "s14",
+        "startMs": 144000,
+        "endMs": 156000,
+        "text": "I want to be transparent, though: in the month after I stopped being strict, I gained about three pounds back."
+      },
+      {
+        "id": "s15",
+        "startMs": 156000,
+        "endMs": 166000,
+        "text": "So the net is closer to five pounds, which I'm still happy with, but it's not magic."
+      },
+      {
+        "id": "s16",
+        "startMs": 166000,
+        "endMs": 178000,
+        "text": "Is it safe? For me it felt completely safe, and honestly I think pretty much anyone can do this."
+      },
+      {
+        "id": "s17",
+        "startMs": 178000,
+        "endMs": 192000,
+        "text": "That said, if you're diabetic, pregnant, or have a history of eating disorders, please do not start this without talking to a doctor first."
+      },
+      {
+        "id": "s18",
+        "startMs": 192000,
+        "endMs": 204000,
+        "text": "My friend who is type one diabetic tried it and had a scary low blood sugar episode, so this is not for everyone."
+      },
+      {
+        "id": "s19",
+        "startMs": 204000,
+        "endMs": 216000,
+        "text": "Workouts: I kept lifting three times a week, and I trained around four p.m., inside my eating window, never fasted."
+      },
+      {
+        "id": "s20",
+        "startMs": 216000,
+        "endMs": 228000,
+        "text": "Strength stayed about the same, which surprised me. I thought I'd lose a lot more."
+      },
+      {
+        "id": "s21",
+        "startMs": 228000,
+        "endMs": 240000,
+        "text": "Would I do it again? Probably, but more like five days a week, not every single day."
+      },
+      {
+        "id": "s22",
+        "startMs": 240000,
+        "endMs": 250000,
+        "text": "Thanks for watching, drop your questions below and I'll answer them in the next video."
+      }
+    ],
+    "limitations": []
+  },
+  "clips": [
+    {
+      "id": "clip-safe",
+      "title": "Is intermittent fasting safe?",
+      "previewUrl": "https://fixtures.invalid/previews/clip-safe.mp4",
+      "exportUrl": "https://fixtures.invalid/exports/clip-safe.mp4",
+      "sourceRanges": [
+        {
+          "startMs": 166000,
+          "endMs": 178000
+        }
+      ],
+      "transcriptStatus": "available",
+      "transcript": [
+        {
+          "id": "clip-safe-t1",
+          "sourceStartMs": 166000,
+          "sourceEndMs": 178000,
+          "text": "Is it safe? For me it felt completely safe, and honestly I think pretty much anyone can do this."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Fixture handoff for clip-review development."
+  ]
+}

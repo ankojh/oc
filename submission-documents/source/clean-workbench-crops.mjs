@@ -1,0 +1,8 @@
+import {chromium} from '../../marketing/node_modules/playwright/index.mjs';import {fileURLToPath} from 'node:url';
+const browser=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE});const c=await browser.newContext({viewport:{width:1440,height:1100},deviceScaleFactor:2});const p=await c.newPage();const out=new URL('../screenshots/',import.meta.url);
+async function crop(selector,name){const l=p.locator(selector).first();await l.scrollIntoViewIfNeeded();await p.evaluate(selector=>{const target=document.querySelector(selector),header=document.querySelector('.workbench-header'),d=document.querySelector('dialog');d.scrollTop+=target.getBoundingClientRect().top-header.getBoundingClientRect().bottom-18;},selector);await l.screenshot({path:fileURLToPath(new URL(name+'.png',out))});}
+try{
+ await p.goto('http://127.0.0.1:3103/workbench?mode=sample');await p.locator('#workbench').waitFor();await p.locator('#research-button').click();await p.locator('#credit-ack').waitFor();await crop('#workbench-results .wb-question','workbench-offline-research');
+ await p.locator('#credit-ack').check();await p.getByRole('button',{name:'Generate sample clips'}).click();await p.getByRole('button',{name:'Export sample evidence'}).waitFor();await crop('#workbench-results .wb-question','workbench-offline-review');
+ await p.goto('http://127.0.0.1:3103/workbench?mode=fixture&id=int_20261011_1d965152');await p.locator('.wb-error').waitFor();await crop('#workbench-results .wb-question','workbench-research-question');await crop('.wb-error','workbench-review-limitation');
+}finally{await browser.close();}

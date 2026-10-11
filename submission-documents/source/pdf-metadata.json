@@ -1,0 +1,12 @@
+{
+  "rebrand-thesis.pdf": {
+    "pages": 2,
+    "textSelectable": true,
+    "links": 4
+  },
+  "proof-of-concept-page.pdf": {
+    "pages": 7,
+    "textSelectable": true,
+    "links": 3
+  }
+}

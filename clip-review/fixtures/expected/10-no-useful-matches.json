@@ -1,0 +1,25 @@
+{
+  "runId": "fx-no-useful-matches",
+  "scenario": "no useful matches",
+  "description": "Only a workout clip was generated. q-break-fast is answered in the source (s10) but not in clips; coffee is never mentioned in the full source.",
+  "status": "complete",
+  "verdicts": {
+    "q-break-fast|clip-workout": [
+      "no_match"
+    ],
+    "q-coffee|clip-workout": [
+      "no_match"
+    ]
+  },
+  "unanswered": {
+    "q-break-fast": [
+      "not_found_in_generated_clips"
+    ],
+    "q-coffee": [
+      "not_found_in_available_source"
+    ]
+  },
+  "recommendations": {
+    "maxCount": 0
+  }
+}

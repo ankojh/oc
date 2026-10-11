@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Audience Research · OpusClip adapter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { font-family: system-ui, sans-serif; color: #1d1d1f; background: #f6f6f8; }
+  body { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .muted { color: #666; font-size: 13px; }
+  section { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 14px 0; }
+  label { display: block; font-size: 13px; margin: 8px 0 4px; font-weight: 600; }
+  input[type=text], textarea { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #bbb; border-radius: 6px; font: inherit; }
+  button { padding: 8px 14px; border-radius: 6px; border: 1px solid #333; background: #222; color: #fff; cursor: pointer; font: inherit; }
+  button.secondary { background: #fff; color: #222; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .banner { padding: 8px 12px; border-radius: 6px; font-weight: 700; margin-bottom: 10px; }
+  .fixture { background: #fff3cd; border: 2px dashed #b58900; color: #6b4f00; }
+  .live { background: #e6f4ea; border: 1px solid #2e7d32; color: #1b5e20; }
+  .error { background: #fdecea; border: 1px solid #c62828; color: #8e0000; padding: 10px; border-radius: 6px; }
+  .warn { background: #fff8e1; border: 1px solid #f9a825; padding: 10px; border-radius: 6px; }
+  .q { border-left: 4px solid #444; padding: 6px 12px; margin: 12px 0; }
+  .q .kind { font-size: 11px; text-transform: uppercase; padding: 2px 6px; border-radius: 4px; background: #eee; margin-left: 6px; }
+  blockquote { margin: 6px 0 6px 0; padding: 6px 10px; background: #fafafa; border: 1px solid #eee; border-radius: 4px; white-space: pre-wrap; font-size: 14px; }
+  .src { font-size: 12px; }
+  .log { font: 12px ui-monospace, monospace; background: #111; color: #ddd; padding: 10px; border-radius: 6px; max-height: 220px; overflow: auto; white-space: pre-wrap; }
+  .pill { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 10px; background: #eee; }
+  ul.limits { font-size: 13px; color: #444; }
+  pre.prompt { white-space: pre-wrap; background: #f3f3f3; padding: 8px; border-radius: 6px; font-size: 13px; }
+  .clip { border: 1px solid #e3e3e3; border-radius: 6px; padding: 8px 10px; margin: 8px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Audience Research Agent + OpusClip adapter</h1>
+<div class="muted">Hypothesis under test: real audience questions can guide useful clip selection. Nothing here validates that hypothesis.</div>
+
+<section>
+  <form id="form">
+    <label for="url">Public YouTube video URL</label>
+    <input id="url" type="text" placeholder="https://www.youtube.com/watch?v=…" required>
+    <label for="goal">Creator goal (optional)</label>
+    <input id="goal" type="text" placeholder="e.g. Turn recurring viewer questions into Shorts">
+    <label>Mode</label>
+    <div class="row">
+      <label style="font-weight:400"><input type="radio" name="mode" value="fixture" checked> Fixture (no credentials, synthetic data)</label>
+      <label style="font-weight:400"><input type="radio" name="mode" value="live"> Live (YouTube API + Codex + OpusClip)</label>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button type="submit">Research audience questions</button>
+      <span class="muted" id="fixtureLinks"></span>
+    </div>
+    <div class="muted" id="health" style="margin-top:8px"></div>
+  </form>
+</section>
+
+<div id="run"></div>
+
+<section>
+  <div class="row"><strong>Recent runs</strong> <button class="secondary" id="refreshRuns" type="button">Refresh</button></div>
+  <div id="runs" class="muted"></div>
+</section>
+
+<script>
+const $ = (s) => document.querySelector(s);
+/** Builds DOM nodes with textContent only — comment text is untrusted. */
+function h(tag, attrs = {}, ...children) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else if (k === "href") { if (/^https?:\/\//.test(v) || v.startsWith("/")) el.setAttribute("href", v); }
+    else if (v !== false && v != null) el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of children.flat()) if (c != null && c !== false) el.append(c instanceof Node ? c : document.createTextNode(String(c)));
+  return el;
+}
+
+async function api(method, path, body) {
+  const res = await fetch(path, { method, headers: body ? { "Content-Type": "application/json" } : {}, body: body ? JSON.stringify(body) : undefined });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw Object.assign(new Error(json.error?.message || res.statusText), { info: json.error });
+  return json;
+}
+
+let current = null, timer = null, actionError = null;
+
+async function loadHealth() {
+  const hres = await api("GET", "/health");
+  $("#health").textContent = `Live config — YouTube key: ${hres.live.youtubeApiKey ? "set" : "missing"} · OpusClip transport: ${hres.live.opusTransport}${hres.live.opusTransport === "rest" ? ` (key ${hres.live.opusApiKey ? "set" : "missing"})` : " (OAuth via mcp-remote)"} · Codex model: ${hres.live.codexModel}`;
+  const links = $("#fixtureLinks"); links.replaceChildren("Fixtures: ");
+  for (const v of hres.fixtureVideos) links.append(h("a", { href: "#", onclick: (e) => { e.preventDefault(); $("#url").value = `https://www.youtube.com/watch?v=${v.videoId}`; document.querySelector("input[value=fixture]").checked = true; } }, v.videoId), " ");
+}
+
+async function loadRuns() {
+  const runs = await api("GET", "/runs");
+  $("#runs").replaceChildren(...runs.slice(0, 15).map((r) => h("div", {}, h("a", { href: `#${r.runId}` }, r.runId), ` · ${r.mode} · ${r.videoId} · `, h("span", { class: "pill" }, r.status))));
+}
+
+$("#form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  try {
+    const mode = document.querySelector("input[name=mode]:checked").value;
+    const { runId } = await api("POST", "/research", { videoUrl: $("#url").value, creatorGoal: $("#goal").value || undefined, mode });
+    location.hash = runId;
+  } catch (err) { actionError = err; render(); }
+});
+$("#refreshRuns").addEventListener("click", loadRuns);
+window.addEventListener("hashchange", () => openRun(location.hash.slice(1)));
+
+async function openRun(runId) {
+  clearTimeout(timer); actionError = null;
+  if (!runId) { current = null; $("#run").replaceChildren(); return; }
+  await poll(runId);
+}
+
+async function poll(runId) {
+  try { current = await api("GET", `/runs/${runId}`); } catch (err) { current = null; actionError = err; }
+  render();
+  const active = current && ["researching", "generating"].includes(current.status);
+  if (active) timer = setTimeout(() => poll(runId), 2000);
+  else loadRuns();
+}
+
+async function act(fn) {
+  actionError = null;
+  try { await fn(); } catch (err) { actionError = err; }
+  if (current) await poll(current.runId);
+}
+
+function errorBox(err) {
+  if (!err) return null;
+  return h("div", { class: "error" }, h("strong", {}, err.code ? `${err.code}: ` : ""), err.message, err.action ? h("div", {}, "→ ", err.action) : null);
+}
+
+function render() {
+  const root = $("#run");
+  if (!current) { root.replaceChildren(actionError ? h("section", {}, errorBox(actionError.info || actionError)) : ""); return; }
+  const r = current, brief = r.result, g = r.generation;
+  const evidenceById = Object.fromEntries((brief?.evidence || []).map((e) => [e.id, e]));
+  const parts = [];
+  parts.push(h("div", { class: `banner ${r.mode}` }, r.modeLabel));
+  parts.push(h("div", { class: "row" }, h("strong", {}, r.runId), h("span", { class: "pill" }, r.status), h("span", { class: "muted" }, r.input.videoUrl)));
+  if (actionError) parts.push(errorBox(actionError.info || actionError));
+  if (r.error && r.status !== "completed") parts.push(errorBox(r.error));
+
+  if (brief) {
+    parts.push(h("h3", {}, brief.video.title));
+    parts.push(h("div", { class: "muted" }, `Channel ${brief.video.channelId} · ${brief.coverage.commentCount} unique comments from ${brief.coverage.videoIds.length} video(s) · fetched ${brief.coverage.fetchedAt}`));
+    if (brief.researchStatus === "insufficient_evidence")
+      parts.push(h("div", { class: "warn" }, h("strong", {}, "Insufficient evidence. "), "No usable audience questions were found in the retrieved comments, so no clipping brief was produced. No questions were invented."));
+    for (const q of brief.questions) {
+      parts.push(h("div", { class: "q" },
+        h("div", {}, h("strong", {}, `#${q.priority} ${q.question}`), h("span", { class: "kind" }, q.kind), h("span", { class: "muted" }, ` · ${q.observedCommentCount} comment${q.observedCommentCount === 1 ? "" : "s"}`)),
+        h("div", { class: "muted" }, q.rationale),
+        q.evidenceIds.map((id) => { const e = evidenceById[id]; return h("div", {}, h("blockquote", {}, e.quote), h("div", { class: "src" }, h("a", { href: e.url, target: "_blank", rel: "noopener noreferrer" }, `${e.videoId} · ${e.commentId}`), ` · ${e.publishedAt}`)); }),
+      ));
+    }
+    parts.push(h("details", {}, h("summary", {}, "Coverage & limitations"),
+      h("p", { class: "muted" }, brief.coverage.samplingMethod),
+      h("ul", { class: "limits" }, brief.coverage.limitations.map((l) => h("li", {}, l))),
+      h("a", { href: r.links.debug, target: "_blank" }, "Research debug JSON")));
+    if (brief.generationBrief) {
+      parts.push(h("h4", {}, "OpusClip ClipAnything prompt"));
+      parts.push(h("pre", { class: "prompt" }, brief.generationBrief.customPrompt));
+      parts.push(h("div", { class: "muted" }, `Clip length ${brief.generationBrief.durationSec.join("–")}s · ${brief.generationBrief.aspectRatio}. The prompt guides selection; it is not proof the video answers these questions.`));
+    }
+  }
+
+  if (r.status === "research_ready" || g.status === "failed" || g.status === "needs_reconciliation") {
+    const confirm = h("input", { type: "checkbox", id: "confirm" });
+    const needsConfirm = g.consumesCredits;
+    const gen = h("button", { onclick: () => act(() => api("POST", r.links.generate, { confirmCredits: needsConfirm ? confirm.checked : undefined })) }, "Generate clips");
+    if (needsConfirm) { gen.disabled = true; confirm.addEventListener("change", () => (gen.disabled = !confirm.checked)); }
+    parts.push(h("section", {},
+      h("div", { class: g.consumesCredits ? "warn" : "muted" }, g.creditNotice),
+      needsConfirm ? h("label", { style: "font-weight:400" }, confirm, " I understand this submits one paid OpusClip project.") : null,
+      g.status === "needs_reconciliation" ? h("div", { class: "warn" }, "A previous submission's outcome is unknown. ", g.reconciliation?.note || "", " ",
+        h("button", { class: "secondary", onclick: () => act(() => api("POST", `/runs/${r.runId}/reconcile`)) }, "Reconcile"), " ",
+        (g.reconciliation?.candidates || []).map((c) => h("button", { class: "secondary", onclick: () => act(() => api("POST", `/runs/${r.runId}/adopt-project`, { projectId: c.projectId })) }, `Adopt ${c.projectId}`))) : null,
+      h("div", { class: "row", style: "margin-top:8px" },
+        g.status === "not_started" || (g.status === "failed" && g.error?.noJobCreated) ? gen : null,
+        g.projectId && g.status === "failed" ? h("button", { class: "secondary", onclick: () => act(() => api("POST", `/runs/${r.runId}/poll`)) }, "Resume polling (no new job)") : null,
+        (g.status === "needs_reconciliation" || (g.status === "failed" && !g.error?.noJobCreated)) ? h("button", { class: "secondary", onclick: () => {
+          if (confirm.checked || !needsConfirm) act(() => api("POST", r.links.generate, { confirmCredits: true, forceNewProject: true }));
+          else alert("Tick the credit confirmation first.");
+        } }, "Submit a NEW project anyway") : null)));
+  }
+
+  if (g.status !== "not_started") {
+    parts.push(h("div", { class: "muted" }, `OpusClip (${g.transport}) · status ${g.status}${g.projectId ? ` · project ${g.projectId}` : ""}${g.stage ? ` · stage ${g.stage}` : ""} · submissions sent: ${g.submitAttempts}`));
+  }
+  if (r.reviewInputAvailable) parts.push(h("div", {}, h("a", { href: r.links.reviewInput, target: "_blank" }, "Open validated ReviewInput JSON")));
+  parts.push(h("div", { class: "log" }, r.progress.map((p) => `${p.at}  ${p.step.padEnd(14)} ${p.message}\n`).join("")));
+  root.replaceChildren(h("section", {}, parts));
+  if (r.reviewInputAvailable) renderClips(root.firstChild, r.links.reviewInput);
+}
+
+async function renderClips(section, url) {
+  const ri = await api("GET", url).catch(() => null);
+  if (!ri) return;
+  section.append(h("h4", {}, `${ri.clips.length} clip(s) · source transcript: ${ri.sourceTranscript.coverage}`));
+  for (const c of ri.clips) section.append(h("div", { class: "clip" },
+    h("strong", {}, c.title || "(untitled)"), " ",
+    c.previewUrl ? h("a", { href: c.previewUrl, target: "_blank", rel: "noopener noreferrer" }, "preview") : h("span", { class: "muted" }, "no preview"),
+    h("div", { class: "muted" }, c.sourceRanges.length ? c.sourceRanges.map((s) => `${(s.startMs / 1000).toFixed(1)}–${(s.endMs / 1000).toFixed(1)}s`).join(", ") : "source ranges unavailable", ` · transcript ${c.transcriptStatus}`),
+    c.transcript.length ? h("div", {}, c.transcript.map((t) => t.text).join(" ")) : null));
+  section.append(h("ul", { class: "limits" }, ri.limitations.map((l) => h("li", {}, l))));
+}
+
+loadHealth().catch(() => {});
+loadRuns().catch(() => {});
+openRun(location.hash.slice(1));
+</script>
+</body>
+</html>

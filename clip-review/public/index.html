@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src https: http:; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>Audience-to-Clip Review</title>
+<style>
+  :root { --fg:#1d1d1f; --muted:#6b6b73; --line:#e3e3e8; --bg:#fafafa; --card:#fff; --direct:#0a7d38; --partial:#9a6700; --related:#4a5bd4; --none:#777; --unv:#b42318; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--fg); background:var(--bg); }
+  header { padding:16px 24px; border-bottom:1px solid var(--line); background:#fff; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:18px; margin:0; }
+  main { max-width:1100px; margin:0 auto; padding:20px 24px 80px; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; margin:14px 0; }
+  .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  button { font:inherit; padding:7px 14px; border-radius:8px; border:1px solid #222; background:#222; color:#fff; cursor:pointer; }
+  button.secondary { background:#fff; color:#222; }
+  select, input[type=file] { font:inherit; }
+  .banner { padding:10px 14px; border-radius:8px; font-weight:600; margin:10px 0; }
+  .banner.fixture { background:#fff4ce; border:2px dashed #b88a00; color:#5c4500; font-size:16px; letter-spacing:.02em; }
+  .banner.live { background:#e7f6ec; border:1px solid #9fd6b0; color:#0a5c2a; }
+  .banner.error { background:#fdecea; border:1px solid #f3b4ad; color:#8a1c12; font-weight:500; }
+  .pill { display:inline-block; padding:1px 9px; border-radius:999px; font-size:12px; font-weight:600; border:1px solid currentColor; text-transform:uppercase; letter-spacing:.03em; }
+  .v-direct { color:var(--direct); } .v-partial { color:var(--partial); } .v-related_only { color:var(--related); } .v-no_match { color:var(--none); } .v-unverifiable { color:var(--unv); }
+  .kind { color:var(--muted); font-size:12px; border-color:var(--line); }
+  h2 { font-size:17px; margin:22px 0 8px; } h3 { font-size:16px; margin:0 0 6px; }
+  .q { font-size:17px; font-weight:600; }
+  blockquote { margin:6px 0; padding:6px 12px; border-left:3px solid var(--line); color:#333; background:#fcfcfd; }
+  blockquote.answer { border-left-color:var(--direct); background:#f3faf5; font-size:16px; }
+  blockquote.context { border-left-color:var(--unv); background:#fff6f5; }
+  .muted { color:var(--muted); font-size:13px; }
+  .match { border-top:1px solid var(--line); padding-top:12px; margin-top:12px; display:grid; grid-template-columns: 260px 1fr; gap:16px; }
+  .match.compact { grid-template-columns: 1fr; }
+  video { width:100%; max-height:420px; background:#000; border-radius:8px; }
+  .novideo { aspect-ratio: 9/12; display:flex; align-items:center; justify-content:center; background:#f0f0f3; border-radius:8px; color:var(--muted); font-size:13px; text-align:center; padding:12px; }
+  .warn { background:#fff6f5; border:1px solid #f3c4bd; border-radius:8px; padding:8px 12px; margin:8px 0; }
+  ul.lim { margin:6px 0; padding-left:20px; color:#444; font-size:13px; }
+  details summary { cursor:pointer; color:var(--muted); margin-top:10px; }
+  .rec { display:flex; gap:12px; align-items:baseline; padding:6px 0; }
+  .rank { font-weight:700; font-size:20px; width:28px; }
+  code { font-size:12px; background:#f2f2f5; padding:1px 4px; border-radius:4px; }
+  a { color:#2350c8; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Audience-to-Clip Review</h1>
+  <span class="muted">Which generated clips answer questions your audience actually asked — with evidence on both sides.</span>
+</header>
+<main>
+  <section class="panel">
+    <div class="row">
+      <label>Handoff JSON (<code>audience-clips.v1</code> ReviewInput): <input type="file" id="file" accept=".json,application/json"></label>
+      <span class="muted">or fixture:</span>
+      <select id="fixture"><option value="">— choose a fixture —</option></select>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label>Reviewer <select id="backend">
+        <option value="">server default</option>
+        <option value="auto">auto (recorded response for fixtures, else live Codex)</option>
+        <option value="codex">live Codex</option>
+        <option value="fixture">recorded fixture response</option>
+      </select></label>
+      <label><input type="checkbox" id="rerun"> force rerun</label>
+      <button id="go" disabled>Review clips</button>
+      <span id="loaded" class="muted"></span>
+    </div>
+  </section>
+  <section id="status"></section>
+  <section id="out"></section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

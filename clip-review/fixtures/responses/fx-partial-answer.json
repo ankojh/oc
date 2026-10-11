@@ -1,0 +1,68 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:07.076Z",
+    "threadId": "01a12cc9-48ea-7522-aee8-11ee7910a3e6"
+  },
+  "binding": {
+    "packetHash": "1ce07983e79588cdcfee813ece36651962e105982d867dc7ba40ca57f04c8174",
+    "handoff": "fixtures/inputs/03-partial-answer.json",
+    "boundAt": "2026-10-11T21:28:54.707Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-weight",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e05",
+          "e06"
+        ],
+        "kindIssue": null,
+        "explanation": "e05 explicitly asks how much weight was lost and whether it stayed off; e06 asks whether it was regained. Both cited comments support the question."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-weight",
+        "verdict": "partial",
+        "explanation": "The clip reports eight pounds lost over thirty days but does not answer whether the weight stayed off afterwards.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-weight-t2",
+            "quote": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The clip ends before the disclosure that three pounds were regained the following month, leaving a net loss closer to five pounds. Omitting this follow-up could overstate the lasting result for viewers asking whether the weight stayed off.",
+            "sourceSegmentIds": [
+              "s14",
+              "s15"
+            ]
+          }
+        ],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-weight",
+        "questionIds": [
+          "q-weight"
+        ],
+        "reason": "It clearly answers the amount-lost portion of the supported question. To meet the goal of avoiding overselling, extend it through s14 and s15 to include the regain and net five-pound result before publishing."
+      }
+    ],
+    "unansweredQuestions": [],
+    "limitations": [
+      "The comments are synthetic fixtures, not collected audience feedback. The two supplied comments support the wording, but the claimed 212-comment coverage and broader recurrence cannot be verified from this packet.",
+      "The question receives only a partial answer in the generated clip; its retention portion is answered in source segments s14 and s15."
+    ]
+  }
+}

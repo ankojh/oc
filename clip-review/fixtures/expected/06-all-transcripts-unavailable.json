@@ -1,0 +1,22 @@
+{
+  "runId": "fx-all-transcripts-unavailable",
+  "scenario": "no transcripts at all",
+  "description": "No clip transcript and no source transcript: review must be 'unverifiable' and the reviewer model is not invoked.",
+  "status": "unverifiable",
+  "verdicts": {
+    "q-weight|clip-results-vertical": [
+      "unverifiable"
+    ],
+    "q-weight|clip-weight": [
+      "unverifiable"
+    ]
+  },
+  "unanswered": {
+    "q-weight": [
+      "cannot_assess"
+    ]
+  },
+  "recommendations": {
+    "maxCount": 0
+  }
+}

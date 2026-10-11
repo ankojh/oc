@@ -1,0 +1,113 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:33.650Z",
+    "threadId": "01a12cc9-89df-7d62-9639-7b1631ce0823"
+  },
+  "binding": {
+    "packetHash": "9c9c729a658e1319146dbdc462b3106a4e6916d5093ded35345eb0aa3395620d",
+    "handoff": "fixtures/inputs/08-invalid-references.json",
+    "boundAt": "2026-10-11T21:28:54.710Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-hunger",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e01"
+        ],
+        "kindIssue": null,
+        "explanation": "e01 explicitly asks how first-week hunger was handled. Only one supporting comment is available; the claimed second comment cannot be checked because e99 is missing."
+      },
+      {
+        "questionId": "q-weight",
+        "support": "unsupported",
+        "supportingEvidenceIds": [],
+        "kindIssue": "The question is labeled explicit, but no cited comments are available to verify that anyone asked it.",
+        "explanation": "The evidence array is empty and e404 is missing, so neither the question's audience support nor the claimed two comments can be verified."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger",
+        "verdict": "direct",
+        "explanation": "The creator describes drinking more water with a pinch of salt and says the hunger subsided by day six, directly answering how they handled the first week.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-weight",
+        "verdict": "no_match",
+        "explanation": "The available passages discuss weight changes, with no answer about managing first-week hunger.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": [
+          "The listed source range 400000–410000 has no corresponding transcript, so that portion cannot be assessed."
+        ]
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "The clip discusses hunger and energy, without reporting weight loss or whether it lasted.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-weight",
+        "clipId": "clip-weight",
+        "verdict": "partial",
+        "explanation": "The verifiable clip passages report eight pounds lost in a month. Weight maintenance is not established by citeable passages within the listed source ranges.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-weight-t2",
+            "quote": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+          }
+        ],
+        "contextWarnings": [
+          {
+            "explanation": "The listed clip ranges omit the subsequent disclosure that three pounds returned the following month, leaving a net loss closer to five pounds. Presenting only the eight-pound result could overstate how much weight stayed off.",
+            "sourceSegmentIds": [
+              "s14",
+              "s15"
+            ]
+          }
+        ],
+        "limitations": [
+          "clip-weight-t3 describes regain but is marked non-citeable and falls outside the listed clip ranges; it cannot establish that the clip includes the follow-up.",
+          "The listed source range 400000–410000 has no corresponding clip or source transcript, so its content cannot be verified."
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-hunger",
+        "questionIds": [
+          "q-hunger"
+        ],
+        "reason": "It answers the explicit question in e01 with a clear personal account and a first-week timeline. Keep the framing as the creator's experience, since the passage does not establish that viewers will get the same result."
+      }
+    ],
+    "unansweredQuestions": [],
+    "limitations": [
+      "The comments are synthetic fixtures, not collected audience feedback; the reported commentCount of 212 does not establish recurring viewer demand.",
+      "Missing evidence e99 and e404 prevents verification of the researcher's comment counts and leaves q-weight unsupported.",
+      "Although source coverage is labeled full, its segments end at 250000, while clip-weight lists an additional range at 400000–410000. That range is unavailable for review.",
+      "The weight clip's non-citeable regain passage conflicts with its listed source ranges, limiting verification of the final edit."
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "runId": "fx-repeated-answer",
+  "scenario": "multiple clips repeat the same answer",
+  "description": "Three clips cut from overlapping footage give the same hunger answer. Recommendations should include at most one of them and use the remaining slot(s) for different coverage (clip-weight).",
+  "status": "complete",
+  "verdicts": {
+    "q-hunger|clip-hunger": [
+      "direct"
+    ],
+    "q-hunger|clip-hunger-short": [
+      "direct",
+      "partial"
+    ],
+    "q-weight|clip-weight": [
+      "partial"
+    ]
+  },
+  "recommendations": {
+    "atMostOneOf": [
+      [
+        "clip-hunger",
+        "clip-hunger-short",
+        "clip-hunger-water"
+      ]
+    ],
+    "mustInclude": [
+      "clip-weight"
+    ]
+  }
+}

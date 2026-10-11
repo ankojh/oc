@@ -1,0 +1,90 @@
+{
+  "description": "Synthetic channel whose comments contain no questions; one video has comments disabled. Must yield insufficient_evidence.",
+  "channels": {
+    "UCfixtureQuietChannel001": {
+      "uploadsPlaylistId": "UUfixtureQuietChannel001"
+    }
+  },
+  "playlists": {
+    "UUfixtureQuietChannel001": [
+      {
+        "videoId": "FXnoqs00001",
+        "title": "Ten Minutes of Rain on a Tin Roof",
+        "publishedAt": "2026-09-18T15:00:00.000Z"
+      },
+      {
+        "videoId": "FXnoqs00002",
+        "title": "Ocean Waves at Night",
+        "publishedAt": "2026-09-10T15:00:00.000Z"
+      },
+      {
+        "videoId": "FXnoqs00003",
+        "title": "Forest Birdsong at Dawn",
+        "publishedAt": "2026-09-02T15:00:00.000Z"
+      }
+    ]
+  },
+  "videos": {
+    "FXnoqs00001": {
+      "videoId": "FXnoqs00001",
+      "channelId": "UCfixtureQuietChannel001",
+      "channelTitle": "Fixture Ambience Channel",
+      "title": "Ten Minutes of Rain on a Tin Roof",
+      "publishedAt": "2026-09-18T15:00:00.000Z",
+      "durationMs": 600000
+    },
+    "FXnoqs00002": {
+      "videoId": "FXnoqs00002",
+      "channelId": "UCfixtureQuietChannel001",
+      "channelTitle": "Fixture Ambience Channel",
+      "title": "Ocean Waves at Night",
+      "publishedAt": "2026-09-10T15:00:00.000Z",
+      "durationMs": 600000
+    },
+    "FXnoqs00003": {
+      "videoId": "FXnoqs00003",
+      "channelId": "UCfixtureQuietChannel001",
+      "channelTitle": "Fixture Ambience Channel",
+      "title": "Forest Birdsong at Dawn",
+      "publishedAt": "2026-09-02T15:00:00.000Z",
+      "durationMs": 600000
+    }
+  },
+  "comments": {
+    "FXnoqs00001": {
+      "status": "ok",
+      "items": [
+        {
+          "commentId": "UgxFixture0022",
+          "authorChannelId": "UCfixtureViewer0022",
+          "text": "So relaxing, thank you.",
+          "publishedAt": "2026-09-18T20:00:00.000Z",
+          "likeCount": 3
+        },
+        {
+          "commentId": "UgxFixture0023",
+          "authorChannelId": "UCfixtureViewer0023",
+          "text": "Perfect for sleeping",
+          "publishedAt": "2026-09-19T02:00:00.000Z",
+          "likeCount": 1
+        }
+      ]
+    },
+    "FXnoqs00002": {
+      "status": "comments_disabled",
+      "items": []
+    },
+    "FXnoqs00003": {
+      "status": "ok",
+      "items": [
+        {
+          "commentId": "UgxFixture0024",
+          "authorChannelId": "UCfixtureViewer0024",
+          "text": "beautiful",
+          "publishedAt": "2026-09-03T08:00:00.000Z",
+          "likeCount": 0
+        }
+      ]
+    }
+  }
+}

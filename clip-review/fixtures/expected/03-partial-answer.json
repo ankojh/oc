@@ -1,0 +1,14 @@
+{
+  "runId": "fx-partial-answer",
+  "scenario": "partial answer",
+  "description": "clip-weight gives the 8 lb number but not whether it was kept off (that is in source s14-s15, outside the clip).",
+  "status": "complete",
+  "verdicts": {
+    "q-weight|clip-weight": [
+      "partial"
+    ]
+  },
+  "answered": [
+    "q-weight"
+  ]
+}

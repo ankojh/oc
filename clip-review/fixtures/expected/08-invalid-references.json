@@ -1,0 +1,14 @@
+{
+  "runId": "fx-invalid-references",
+  "scenario": "nonexistent ids and out-of-range timestamps",
+  "description": "q-hunger cites e01 plus nonexistent e99; q-weight cites only nonexistent e404; generation requested nonexistent q-ghost; clip-weight includes a transcript segment outside its source ranges and a range beyond the source end.",
+  "status": "complete",
+  "verdicts": {
+    "q-hunger|clip-hunger": [
+      "direct"
+    ]
+  },
+  "unsupportedQuestions": [
+    "q-weight"
+  ]
+}

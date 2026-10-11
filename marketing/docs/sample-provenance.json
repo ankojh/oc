@@ -1,0 +1,7 @@
+{
+  "source": "audience-research/fixtures/exports/review-input.fixture.json",
+  "sha256": "7a282df94dfa77d2ae6988de633d887dfcce71f102b8bd0a5c58a033043ed0fc",
+  "mode": "synthetic fixture",
+  "judgment": "hand-authored marketing storyboard, not agent output",
+  "capturedAt": "2026-10-11T21:36:33.350Z"
+}

@@ -1,0 +1,10 @@
+{
+  "runId": "fx-insufficient-evidence",
+  "scenario": "research reported insufficient evidence",
+  "description": "No questions; report status insufficient_evidence with no recommendations.",
+  "status": "insufficient_evidence",
+  "verdicts": {},
+  "recommendations": {
+    "maxCount": 0
+  }
+}

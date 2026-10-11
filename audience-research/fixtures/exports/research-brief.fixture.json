@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "runId": "run_fixture_demo",
+  "mode": "fixture",
+  "video": {
+    "url": "https://www.youtube.com/watch?v=FXdemo00001",
+    "videoId": "FXdemo00001",
+    "channelId": "UCfixtureDemoChannel0001",
+    "title": "How I Edit YouTube Videos Fast: My Full Editing Workflow"
+  },
+  "creatorGoal": "Turn recurring viewer questions into Shorts",
+  "researchStatus": "ready",
+  "coverage": {
+    "fetchedAt": "2026-10-01T12:00:00.000Z",
+    "videoIds": [
+      "FXdemo00001",
+      "FXrel000005",
+      "FXrel000002",
+      "FXrel000004",
+      "FXrel000001"
+    ],
+    "commentCount": 20,
+    "samplingMethod": "FIXTURE DATA (synthetic comments in the shape of YouTube Data API commentThreads.list), order=relevance, top-level comments only, up to 100 per video; source video plus up to 5 same-channel uploads chosen by heuristic-fixture-analyzer from the 6 most recent. Videos attempted: FXdemo00001=ok(12), FXrel000005=ok(1), FXrel000002=ok(3), FXrel000004=ok(1), FXrel000003=comments_disabled(0), FXrel000001=ok(3). 20 comments fetched (20 distinct comment IDs); 16 eligible after removing 1 duplicate IDs/text, 3 spam and 0 empty comments.",
+    "limitations": [
+      "FIXTURE MODE: these are synthetic comments, not a real creator's audience.",
+      "Related video FXrel000003: Fixture status: comments_disabled",
+      "1 duplicate comment(s) removed before analysis.",
+      "3 obvious spam comment(s) removed before analysis.",
+      "Only top-level comments were sampled; replies were not retrieved."
+    ]
+  },
+  "evidence": [
+    {
+      "id": "ev_1",
+      "commentId": "UgxFixture0001",
+      "videoId": "FXdemo00001",
+      "url": "https://www.youtube.com/watch?v=FXdemo00001&lc=UgxFixture0001",
+      "quote": "What microphone do you use for the voiceover? It sounds so clean.",
+      "publishedAt": "2026-09-20T16:02:11.000Z"
+    },
+    {
+      "id": "ev_2",
+      "commentId": "UgxFixture0005",
+      "videoId": "FXdemo00001",
+      "url": "https://www.youtube.com/watch?v=FXdemo00001&lc=UgxFixture0005",
+      "quote": "Which microphone is that? Your voiceover audio is crazy good",
+      "publishedAt": "2026-09-20T17:20:15.000Z"
+    },
+    {
+      "id": "ev_3",
+      "commentId": "UgxFixture0013",
+      "videoId": "FXrel000001",
+      "url": "https://www.youtube.com/watch?v=FXrel000001&lc=UgxFixture0013",
+      "quote": "Mic question: what microphone gives your voiceover that warm sound?",
+      "publishedAt": "2026-09-12T17:00:00.000Z"
+    },
+    {
+      "id": "ev_4",
+      "commentId": "UgxFixture0003",
+      "videoId": "FXdemo00001",
+      "url": "https://www.youtube.com/watch?v=FXdemo00001&lc=UgxFixture0003",
+      "quote": "How do you color grade your footage? What LUT is that?",
+      "publishedAt": "2026-09-20T16:10:03.000Z"
+    },
+    {
+      "id": "ev_5",
+      "commentId": "UgxFixture0010",
+      "videoId": "FXdemo00001",
+      "url": "https://www.youtube.com/watch?v=FXdemo00001&lc=UgxFixture0010",
+      "quote": "What LUT do you use to color grade? Looks cinematic.",
+      "publishedAt": "2026-09-20T20:12:09.000Z"
+    },
+    {
+      "id": "ev_6",
+      "commentId": "UgxFixture0016",
+      "videoId": "FXrel000002",
+      "url": "https://www.youtube.com/watch?v=FXrel000002&lc=UgxFixture0016",
+      "quote": "Can you share your color grade settings? The LUT looks amazing.",
+      "publishedAt": "2026-09-06T09:00:00.000Z"
+    },
+    {
+      "id": "ev_7",
+      "commentId": "UgxFixture0006",
+      "videoId": "FXdemo00001",
+      "url": "https://www.youtube.com/watch?v=FXdemo00001&lc=UgxFixture0006",
+      "quote": "Please make a video on how you organize project files and folders.",
+      "publishedAt": "2026-09-20T18:00:00.000Z"
+    },
+    {
+      "id": "ev_8",
+      "commentId": "UgxFixture0017",
+      "videoId": "FXrel000002",
+      "url": "https://www.youtube.com/watch?v=FXrel000002&lc=UgxFixture0017",
+      "quote": "I'd love to see your project folder organization system, a full tour would help.",
+      "publishedAt": "2026-09-06T12:00:00.000Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_1",
+      "question": "What microphone do you use for the voiceover?",
+      "kind": "explicit",
+      "evidenceIds": [
+        "ev_1",
+        "ev_2",
+        "ev_3"
+      ],
+      "observedCommentCount": 3,
+      "priority": 1,
+      "rationale": "3 distinct comments ask this."
+    },
+    {
+      "id": "q_2",
+      "question": "How do you color grade your footage?",
+      "kind": "explicit",
+      "evidenceIds": [
+        "ev_4",
+        "ev_5",
+        "ev_6"
+      ],
+      "observedCommentCount": 3,
+      "priority": 2,
+      "rationale": "3 distinct comments ask this."
+    },
+    {
+      "id": "q_3",
+      "question": "Could you cover this viewer request: \"Please make a video on how you organize project files and folders\"?",
+      "kind": "inferred",
+      "evidenceIds": [
+        "ev_7",
+        "ev_8"
+      ],
+      "observedCommentCount": 2,
+      "priority": 3,
+      "rationale": "2 distinct comments request this. Inferred from a request, not asked as a question."
+    }
+  ],
+  "generationBrief": {
+    "targetQuestionIds": [
+      "q_1",
+      "q_2",
+      "q_3"
+    ],
+    "customPrompt": "Find moments where the speaker directly addresses one of these viewer questions: 1) What microphone do you use for the voiceover? 2) How do you color grade your footage? 3) Could you cover this viewer request: \"Please make a video on how you organize project files and folders\"? Creator goal: Turn recurring viewer questions into Shorts. Choose self-contained segments where the answer or explanation is actually spoken or shown. Skip a question if the video never addresses it; do not force clips for it.",
+    "durationSec": [
+      0,
+      90
+    ],
+    "aspectRatio": "portrait"
+  }
+}

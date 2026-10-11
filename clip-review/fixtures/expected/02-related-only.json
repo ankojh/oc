@@ -1,0 +1,22 @@
+{
+  "runId": "fx-related-only",
+  "scenario": "related topic, no answer",
+  "description": "clip-window discusses eating-window timing but never says what was eaten. The full source (s10) does contain the answer, so the gap is in the clips, not the video.",
+  "status": "complete",
+  "verdicts": {
+    "q-break-fast|clip-window": [
+      "related_only",
+      "no_match"
+    ]
+  },
+  "unanswered": {
+    "q-break-fast": [
+      "not_found_in_generated_clips"
+    ]
+  },
+  "recommendations": {
+    "mustExclude": [
+      "clip-window"
+    ]
+  }
+}

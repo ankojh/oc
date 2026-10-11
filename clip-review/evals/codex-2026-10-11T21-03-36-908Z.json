@@ -1,0 +1,155 @@
+{
+  "reviewerVersion": "clip-review@0.1.0",
+  "promptVersion": "clip-review-prompt.v1",
+  "backend": "codex",
+  "backendVersionKey": "codex:gpt-6-astra:medium:clip-review-prompt.v1",
+  "ranAt": "2026-10-11T21:03:36.909Z",
+  "disclaimer": "Synthetic fixtures with hand-labelled expectations. Results show behaviour on known cases only and do not establish real-world quality.",
+  "totals": {
+    "fixtures": 1,
+    "failedRuns": 0,
+    "checks": 6,
+    "passed": 5
+  },
+  "results": [
+    {
+      "fixture": "01-direct-answer.json",
+      "scenario": "direct answer",
+      "ok": true,
+      "reviewer": {
+        "backend": "codex",
+        "model": "gpt-6-astra",
+        "reasoningEffort": "medium",
+        "promptVersion": "clip-review-prompt.v1",
+        "threadId": "01a12cc6-df4b-75a2-9bdc-b5cb25874783",
+        "usage": {
+          "input_tokens": 13441,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 728,
+          "reasoning_output_tokens": 66
+        },
+        "durationMs": 23726,
+        "toolActivity": [],
+        "fixtureResponse": null
+      },
+      "checks": [
+        {
+          "name": "status",
+          "pass": true,
+          "detail": "got complete, expected complete"
+        },
+        {
+          "name": "verdict q-hunger|clip-hunger",
+          "pass": false,
+          "detail": "got partial, allowed direct"
+        },
+        {
+          "name": "verdict q-hunger|clip-workout",
+          "pass": true,
+          "detail": "got no_match, allowed no_match"
+        },
+        {
+          "name": "answered q-hunger",
+          "pass": true,
+          "detail": "not in unanswered"
+        },
+        {
+          "name": "recommends clip-hunger",
+          "pass": true,
+          "detail": "recommended: [clip-hunger]"
+        },
+        {
+          "name": "does not recommend clip-workout",
+          "pass": true,
+          "detail": "recommended: [clip-hunger]"
+        }
+      ],
+      "passed": 5,
+      "total": 6,
+      "corrections": [],
+      "durationMs": 23742,
+      "report": {
+        "schemaVersion": "audience-clips.v1",
+        "runId": "fx-direct-answer",
+        "mode": "fixture",
+        "status": "complete",
+        "matches": [
+          {
+            "questionId": "q-hunger",
+            "clipId": "clip-hunger",
+            "verdict": "partial",
+            "explanation": "The clip explains what the creator says helped hunger and describes early tiredness followed by better focus. It does not explain how they handled tiredness during the first week.",
+            "commentEvidenceIds": [
+              "e01",
+              "e02"
+            ],
+            "answerPassages": [
+              {
+                "clipTranscriptSegmentId": "clip-hunger-t2",
+                "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away.",
+                "sourceStartMs": 42000,
+                "sourceEndMs": 54000
+              },
+              {
+                "clipTranscriptSegmentId": "clip-hunger-t3",
+                "quote": "Energy-wise, I was tired the first few days, but in week two I actually felt more focused in the mornings than before.",
+                "sourceStartMs": 54000,
+                "sourceEndMs": 64000
+              }
+            ],
+            "contextWarnings": [
+              {
+                "explanation": "The clip omits the creator's preceding explanation that a doctor approved their fasting conditionally on monitoring how they felt because they take blood-pressure medication. Preserve this context if presenting the water-and-salt account as practical advice.",
+                "sourceSegmentIds": [
+                  "s03"
+                ]
+              }
+            ],
+            "limitations": [
+              "The transcript reports a personal experience; it does not establish that water and salt caused the improvement or will help viewers.",
+              "Question label issue: e01 explicitly asks how hunger was handled in week one. e02 asks whether tiredness occurred, but does not explicitly ask how it was handled or specify week one; that part of the combined question is inferred."
+            ]
+          },
+          {
+            "questionId": "q-hunger",
+            "clipId": "clip-workout",
+            "verdict": "no_match",
+            "explanation": "Training timing and maintained strength do not explain how the creator handled first-week hunger or tiredness.",
+            "commentEvidenceIds": [
+              "e01",
+              "e02"
+            ],
+            "answerPassages": [],
+            "contextWarnings": [],
+            "limitations": [
+              "Question label issue: e01 explicitly asks how hunger was handled in week one. e02 asks whether tiredness occurred, but does not explicitly ask how it was handled or specify week one; that part of the combined question is inferred."
+            ]
+          }
+        ],
+        "recommendations": [
+          {
+            "rank": 1,
+            "clipId": "clip-hunger",
+            "questionIds": [
+              "q-hunger"
+            ],
+            "reason": "It answers the explicit hunger-management comment and acknowledges early fatigue in a clear personal account. Preserve the medical-monitoring context and avoid promising either a universal remedy or a fatigue-management answer."
+          }
+        ],
+        "unansweredQuestions": [],
+        "limitations": [
+          "FIXTURE DATA: this review was produced from synthetic fixture research, not live audience data.",
+          "Handoff: Fixture handoff for clip-review development.",
+          "Research coverage: Synthetic fixture comments; not collected from YouTube.",
+          "Research coverage: 212 comments via \"fixture: hand-written synthetic comments\"; questions reflect that sample, not the whole audience.",
+          "Generation requested clips for q-hunger; that request was not treated as evidence that any clip answers those questions.",
+          "Research label flagged for \"q-hunger\": e01 explicitly asks how hunger was handled in week one. e02 asks whether tiredness occurred, but does not explicitly ask how it was handled or specify week one; that part of the combined question is inferred.",
+          "Reviewer: The comments are synthetic fixtures, not collected audience feedback.",
+          "Reviewer: Only two comments are supplied. The claimed total of 212 comments and the frequency of this question cannot be verified.",
+          "Reviewer: The full supplied source transcript was reviewed, but audiovisual delivery and factual accuracy were not independently verified."
+        ]
+      }
+    }
+  ]
+}

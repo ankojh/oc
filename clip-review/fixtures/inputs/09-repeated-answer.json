@@ -1,0 +1,366 @@
+{
+  "schemaVersion": "audience-clips.v1",
+  "research": {
+    "schemaVersion": "audience-clips.v1",
+    "runId": "fx-repeated-answer",
+    "mode": "fixture",
+    "video": {
+      "url": "https://www.youtube.com/watch?v=fxIF30days",
+      "videoId": "fxIF30days",
+      "channelId": "UCfixtureMaya",
+      "title": "I Tried Intermittent Fasting for 30 Days (Honest Results)"
+    },
+    "creatorGoal": "Make shorts that answer the questions my viewers keep asking, without overselling results.",
+    "researchStatus": "ready",
+    "coverage": {
+      "fetchedAt": "2026-09-08T00:00:00Z",
+      "videoIds": [
+        "fxIF30days"
+      ],
+      "commentCount": 212,
+      "samplingMethod": "fixture: hand-written synthetic comments",
+      "limitations": [
+        "Synthetic fixture comments; not collected from YouTube."
+      ]
+    },
+    "evidence": [
+      {
+        "id": "e01",
+        "commentId": "Ugx_fixture_e01",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e01",
+        "quote": "how did you deal with the hunger the first week?? I always give up by day 2",
+        "publishedAt": "2026-09-02T14:03:11Z"
+      },
+      {
+        "id": "e02",
+        "commentId": "Ugx_fixture_e02",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e02",
+        "quote": "the hunger in the first few days is what always kills it for me, how did you push through it?",
+        "publishedAt": "2026-09-02T15:20:45Z"
+      },
+      {
+        "id": "e05",
+        "commentId": "Ugx_fixture_e05",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e05",
+        "quote": "how much did you actually lose and did it stay off after you stopped?",
+        "publishedAt": "2026-09-03T18:05:10Z"
+      },
+      {
+        "id": "e06",
+        "commentId": "Ugx_fixture_e06",
+        "videoId": "fxIF30days",
+        "url": "https://www.youtube.com/watch?v=fxIF30days&lc=Ugx_fixture_e06",
+        "quote": "8 lbs is great but did you gain it back??",
+        "publishedAt": "2026-09-04T02:44:39Z"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q-hunger",
+        "question": "How did you get through the hunger in the first week?",
+        "kind": "explicit",
+        "evidenceIds": [
+          "e01",
+          "e02"
+        ],
+        "observedCommentCount": 2,
+        "priority": 1,
+        "rationale": "Two commenters asked directly how first-week hunger was handled."
+      },
+      {
+        "id": "q-weight",
+        "question": "How much weight did you lose, and did you keep it off afterwards?",
+        "kind": "explicit",
+        "evidenceIds": [
+          "e05",
+          "e06"
+        ],
+        "observedCommentCount": 2,
+        "priority": 1,
+        "rationale": "Viewers asked for the number and whether it lasted."
+      }
+    ],
+    "generationBrief": {
+      "targetQuestionIds": [
+        "q-hunger",
+        "q-weight"
+      ],
+      "customPrompt": "Make clips that answer: How did you get through the hunger in the first week? | How much weight did you lose, and did you keep it off afterwards?",
+      "durationSec": [
+        15,
+        60
+      ],
+      "aspectRatio": "portrait"
+    }
+  },
+  "generation": {
+    "provider": "opusclip",
+    "projectId": "fixture-project-fx-repeated-answer",
+    "requestedQuestionIds": [
+      "q-hunger",
+      "q-weight"
+    ],
+    "submittedPrompt": "Make clips that answer: How did you get through the hunger in the first week? | How much weight did you lose, and did you keep it off afterwards?",
+    "completedAt": "2026-09-08T01:00:00Z"
+  },
+  "sourceTranscript": {
+    "coverage": "full",
+    "segments": [
+      {
+        "id": "s01",
+        "startMs": 0,
+        "endMs": 9000,
+        "text": "Hey everyone, today I'm sharing my honest results from thirty days of sixteen-eight intermittent fasting."
+      },
+      {
+        "id": "s02",
+        "startMs": 9000,
+        "endMs": 18000,
+        "text": "Sixteen-eight means I ate everything within an eight hour window, from noon to eight p.m., and fasted the other sixteen hours."
+      },
+      {
+        "id": "s03",
+        "startMs": 18000,
+        "endMs": 30000,
+        "text": "Before I started I talked to my doctor, because I take medication for blood pressure, and she was fine with it as long as I tracked how I felt."
+      },
+      {
+        "id": "s04",
+        "startMs": 30000,
+        "endMs": 42000,
+        "text": "The first week was rough. I was genuinely hungry every morning around ten, and by day three I had a headache most afternoons."
+      },
+      {
+        "id": "s05",
+        "startMs": 42000,
+        "endMs": 54000,
+        "text": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+      },
+      {
+        "id": "s06",
+        "startMs": 54000,
+        "endMs": 64000,
+        "text": "Energy-wise, I was tired the first few days, but in week two I actually felt more focused in the mornings than before."
+      },
+      {
+        "id": "s07",
+        "startMs": 64000,
+        "endMs": 76000,
+        "text": "A lot of you asked about the eating window, so I want to talk about timing for a second."
+      },
+      {
+        "id": "s08",
+        "startMs": 76000,
+        "endMs": 88000,
+        "text": "I picked noon to eight because it fits my work schedule, and dinner with my family is at seven, so I never had to skip it."
+      },
+      {
+        "id": "s09",
+        "startMs": 88000,
+        "endMs": 100000,
+        "text": "Some people do ten to six instead, and honestly the exact window matters less than being consistent every day."
+      },
+      {
+        "id": "s10",
+        "startMs": 100000,
+        "endMs": 112000,
+        "text": "To break my fast I usually had two eggs, Greek yogurt with berries, and a big glass of water, around twelve fifteen."
+      },
+      {
+        "id": "s11",
+        "startMs": 112000,
+        "endMs": 122000,
+        "text": "I avoided breaking the fast with something sugary because the one time I had a pastry I crashed hard an hour later."
+      },
+      {
+        "id": "s12",
+        "startMs": 122000,
+        "endMs": 134000,
+        "text": "Okay, results. I started at one hundred eighty two pounds and on day thirty I weighed one hundred seventy four."
+      },
+      {
+        "id": "s13",
+        "startMs": 134000,
+        "endMs": 144000,
+        "text": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+      },
+      {
+        "id": "s14",
+        "startMs": 144000,
+        "endMs": 156000,
+        "text": "I want to be transparent, though: in the month after I stopped being strict, I gained about three pounds back."
+      },
+      {
+        "id": "s15",
+        "startMs": 156000,
+        "endMs": 166000,
+        "text": "So the net is closer to five pounds, which I'm still happy with, but it's not magic."
+      },
+      {
+        "id": "s16",
+        "startMs": 166000,
+        "endMs": 178000,
+        "text": "Is it safe? For me it felt completely safe, and honestly I think pretty much anyone can do this."
+      },
+      {
+        "id": "s17",
+        "startMs": 178000,
+        "endMs": 192000,
+        "text": "That said, if you're diabetic, pregnant, or have a history of eating disorders, please do not start this without talking to a doctor first."
+      },
+      {
+        "id": "s18",
+        "startMs": 192000,
+        "endMs": 204000,
+        "text": "My friend who is type one diabetic tried it and had a scary low blood sugar episode, so this is not for everyone."
+      },
+      {
+        "id": "s19",
+        "startMs": 204000,
+        "endMs": 216000,
+        "text": "Workouts: I kept lifting three times a week, and I trained around four p.m., inside my eating window, never fasted."
+      },
+      {
+        "id": "s20",
+        "startMs": 216000,
+        "endMs": 228000,
+        "text": "Strength stayed about the same, which surprised me. I thought I'd lose a lot more."
+      },
+      {
+        "id": "s21",
+        "startMs": 228000,
+        "endMs": 240000,
+        "text": "Would I do it again? Probably, but more like five days a week, not every single day."
+      },
+      {
+        "id": "s22",
+        "startMs": 240000,
+        "endMs": 250000,
+        "text": "Thanks for watching, drop your questions below and I'll answer them in the next video."
+      }
+    ],
+    "limitations": []
+  },
+  "clips": [
+    {
+      "id": "clip-hunger",
+      "title": "Surviving week one of fasting",
+      "previewUrl": "https://fixtures.invalid/previews/clip-hunger.mp4",
+      "exportUrl": "https://fixtures.invalid/exports/clip-hunger.mp4",
+      "sourceRanges": [
+        {
+          "startMs": 30000,
+          "endMs": 64000
+        }
+      ],
+      "transcriptStatus": "available",
+      "transcript": [
+        {
+          "id": "clip-hunger-t1",
+          "sourceStartMs": 30000,
+          "sourceEndMs": 42000,
+          "text": "The first week was rough. I was genuinely hungry every morning around ten, and by day three I had a headache most afternoons."
+        },
+        {
+          "id": "clip-hunger-t2",
+          "sourceStartMs": 42000,
+          "sourceEndMs": 54000,
+          "text": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+        },
+        {
+          "id": "clip-hunger-t3",
+          "sourceStartMs": 54000,
+          "sourceEndMs": 64000,
+          "text": "Energy-wise, I was tired the first few days, but in week two I actually felt more focused in the mornings than before."
+        }
+      ]
+    },
+    {
+      "id": "clip-hunger-short",
+      "title": "The salt-water trick for fasting hunger",
+      "previewUrl": "https://fixtures.invalid/previews/clip-hunger-short.mp4",
+      "exportUrl": null,
+      "sourceRanges": [
+        {
+          "startMs": 30000,
+          "endMs": 54000
+        }
+      ],
+      "transcriptStatus": "available",
+      "transcript": [
+        {
+          "id": "clip-hunger-short-t1",
+          "sourceStartMs": 30000,
+          "sourceEndMs": 42000,
+          "text": "The first week was rough. I was genuinely hungry every morning around ten, and by day three I had a headache most afternoons."
+        },
+        {
+          "id": "clip-hunger-short-t2",
+          "sourceStartMs": 42000,
+          "sourceEndMs": 54000,
+          "text": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+        }
+      ]
+    },
+    {
+      "id": "clip-hunger-water",
+      "title": "Why water fixed my hunger",
+      "previewUrl": null,
+      "exportUrl": null,
+      "sourceRanges": [
+        {
+          "startMs": 42000,
+          "endMs": 64000
+        }
+      ],
+      "transcriptStatus": "available",
+      "transcript": [
+        {
+          "id": "clip-hunger-water-t1",
+          "sourceStartMs": 42000,
+          "sourceEndMs": 54000,
+          "text": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+        },
+        {
+          "id": "clip-hunger-water-t2",
+          "sourceStartMs": 54000,
+          "sourceEndMs": 64000,
+          "text": "Energy-wise, I was tired the first few days, but in week two I actually felt more focused in the mornings than before."
+        }
+      ]
+    },
+    {
+      "id": "clip-weight",
+      "title": "My 30 day results: -8 lbs",
+      "previewUrl": "https://fixtures.invalid/previews/clip-weight.mp4",
+      "exportUrl": null,
+      "sourceRanges": [
+        {
+          "startMs": 122000,
+          "endMs": 144000
+        }
+      ],
+      "transcriptStatus": "available",
+      "transcript": [
+        {
+          "id": "clip-weight-t1",
+          "sourceStartMs": 122000,
+          "sourceEndMs": 134000,
+          "text": "Okay, results. I started at one hundred eighty two pounds and on day thirty I weighed one hundred seventy four."
+        },
+        {
+          "id": "clip-weight-t2",
+          "sourceStartMs": 134000,
+          "sourceEndMs": 144000,
+          "text": "So that's eight pounds down in a month, and my waist measurement went down about an inch and a half."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Fixture handoff for clip-review development."
+  ]
+}

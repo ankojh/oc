@@ -1,0 +1,155 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:37.499Z",
+    "threadId": "01a12cc9-868a-7fa3-9a54-00c3f9f2f789"
+  },
+  "binding": {
+    "packetHash": "f5b6f2ad8a8071de03fcf08ee65e9c42a3dfc01a58b8a1be0803eb32246f8450",
+    "handoff": "fixtures/inputs/07-unsupported-question.json",
+    "boundAt": "2026-10-11T21:28:54.710Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-supplements",
+        "support": "unsupported",
+        "supportingEvidenceIds": [],
+        "kindIssue": "Labeled explicit, but the only cited comment asks about the camera, not supplements.",
+        "explanation": "e09 does not support this question. The claim that 14 viewers asked about supplements cannot be verified from the supplied evidence."
+      },
+      {
+        "questionId": "q-window",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e12",
+          "e13"
+        ],
+        "kindIssue": null,
+        "explanation": "Night-shift conflicts and late family dinners clearly support the inferred question about choosing a workable eating window."
+      },
+      {
+        "questionId": "q-hunger",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e01",
+          "e02"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments directly ask how the creator handled hunger during the first week or first few days."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-supplements",
+        "clipId": "clip-hunger",
+        "verdict": "related_only",
+        "explanation": "The clip mentions salt added to water, but does not identify supplements taken during the fast.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-supplements",
+        "clipId": "clip-window",
+        "verdict": "no_match",
+        "explanation": "The clip discusses eating-window timing and says nothing about supplements.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-window",
+        "clipId": "clip-hunger",
+        "verdict": "no_match",
+        "explanation": "Morning hunger and energy changes do not explain how to choose an eating window around a schedule.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      },
+      {
+        "questionId": "q-window",
+        "clipId": "clip-window",
+        "verdict": "direct",
+        "explanation": "The creator explains choosing a window around work and family dinner, with consistency taking precedence over exact hours.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-window-t2",
+            "quote": "I picked noon to eight because it fits my work schedule, and dinner with my family is at seven, so I never had to skip it."
+          },
+          {
+            "clipTranscriptSegmentId": "clip-window-t3",
+            "quote": "Some people do ten to six instead, and honestly the exact window matters less than being consistent every day."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "Provides a general selection principle, without a specific night-shift example."
+        ]
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger",
+        "verdict": "direct",
+        "explanation": "The creator reports drinking more water with a pinch of salt and says the hunger subsided by day six.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "This is a personal account; the transcript does not establish that the same approach will work for viewers."
+        ]
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-window",
+        "verdict": "no_match",
+        "explanation": "The clip explains scheduling but does not discuss managing first-week hunger.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-hunger",
+        "questionIds": [
+          "q-hunger"
+        ],
+        "reason": "Directly answers two explicit audience questions with a clear first-week account. Preserve the personal framing so the reported improvement does not become a promised result."
+      },
+      {
+        "rank": 2,
+        "clipId": "clip-window",
+        "questionIds": [
+          "q-window"
+        ],
+        "reason": "Adds a distinct answer to the schedule concerns in e12 and e13, using work and family dinner as understandable examples."
+      }
+    ],
+    "unansweredQuestions": [
+      {
+        "questionId": "q-supplements",
+        "status": "cannot_assess",
+        "explanation": "The audience question is unsupported by its cited comment. Neither clip nor the supplied full source identifies supplements taken during the fast."
+      }
+    ],
+    "limitations": [
+      "The comments are synthetic fixtures, not comments collected from YouTube.",
+      "Only the supplied evidence can be verified; the reported total of 212 comments and broader frequency claims are not substantiated by the packet.",
+      "Transcript matching establishes what the creator said, not the effectiveness of the reported fasting practices."
+    ]
+  }
+}

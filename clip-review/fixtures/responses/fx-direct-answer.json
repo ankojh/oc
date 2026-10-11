@@ -1,0 +1,72 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:07.936Z",
+    "threadId": "01a12cc9-48ea-7dd0-947c-207d0a09b19b"
+  },
+  "binding": {
+    "packetHash": "9d7970695a6b8f8b47805233ada449e742ff768573ae8c5e0fbaadbc4c1ce338",
+    "handoff": "fixtures/inputs/01-direct-answer.json",
+    "boundAt": "2026-10-11T21:28:54.704Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-hunger",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e01",
+          "e02"
+        ],
+        "kindIssue": null,
+        "explanation": "Both comments explicitly ask how the creator handled hunger during the first week or first few days. The two supplied comments support the claimed count of two."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-hunger",
+        "verdict": "direct",
+        "explanation": "The creator says they drank more water and added a pinch of salt, and reports that hunger largely disappeared by day six. This directly answers how they handled first-week hunger.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-hunger-t2",
+            "quote": "What fixed it was drinking a lot more water and adding a pinch of salt to it, and by day six the hunger basically went away."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": [
+          "The passage reports personal experience; it does not establish that these steps caused the improvement or will work for viewers."
+        ]
+      },
+      {
+        "questionId": "q-hunger",
+        "clipId": "clip-workout",
+        "verdict": "no_match",
+        "explanation": "The clip discusses workout timing and retained strength, with no explanation of how the creator managed first-week hunger.",
+        "answerPassages": [],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [
+      {
+        "rank": 1,
+        "clipId": "clip-hunger",
+        "questionIds": [
+          "q-hunger"
+        ],
+        "reason": "It gives a clear, standalone answer to both cited comments, including what the creator tried and when hunger eased. Present it as the creator's experience to avoid promising viewers the same result."
+      }
+    ],
+    "unansweredQuestions": [],
+    "limitations": [
+      "The comments are synthetic fixtures, not verified YouTube audience feedback.",
+      "Only two comments are supplied; the reported total of 212 comments and broader audience demand cannot be verified.",
+      "The full supplied source transcript was available for context review; the review assesses transcript support, not medical effectiveness."
+    ]
+  }
+}

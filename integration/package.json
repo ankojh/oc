@@ -1,0 +1,22 @@
+{
+  "name": "integration",
+  "version": "0.1.0",
+  "description": "Coordinator and UI joining audience-research (3101) and clip-review (3102)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "launch": "tsx src/launch.ts",
+    "check:env": "tsx src/launch.ts --check",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

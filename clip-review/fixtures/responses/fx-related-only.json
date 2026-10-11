@@ -1,0 +1,56 @@
+{
+  "provenance": {
+    "source": "live Codex recording (gpt-6-astra, clip-review-prompt.v2, 2026-10-11), replayed verbatim",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "medium",
+    "promptVersion": "clip-review-prompt.v2",
+    "recordedAt": "2026-10-11T21:06:08.529Z",
+    "threadId": "01a12cc9-48ea-7822-8cf6-58141b3607db"
+  },
+  "binding": {
+    "packetHash": "26667037470a5c5177885cb254903688ee997f73562f3d960c087a25298c4fc0",
+    "handoff": "fixtures/inputs/02-related-only.json",
+    "boundAt": "2026-10-11T21:28:54.706Z"
+  },
+  "judgment": {
+    "questionChecks": [
+      {
+        "questionId": "q-break-fast",
+        "support": "supported",
+        "supportingEvidenceIds": [
+          "e03",
+          "e04"
+        ],
+        "kindIssue": null,
+        "explanation": "e03 explicitly asks what was eaten to break the fast; e04 asks what the first meal contained. Both support the question and the claimed count of two cited comments."
+      }
+    ],
+    "matches": [
+      {
+        "questionId": "q-break-fast",
+        "clipId": "clip-window",
+        "verdict": "related_only",
+        "explanation": "The clip explains the eating window and why it fit the creator's schedule, but never identifies the foods used to break the fast.",
+        "answerPassages": [
+          {
+            "clipTranscriptSegmentId": "clip-window-t2",
+            "quote": "I picked noon to eight because it fits my work schedule, and dinner with my family is at seven, so I never had to skip it."
+          }
+        ],
+        "contextWarnings": [],
+        "limitations": []
+      }
+    ],
+    "recommendations": [],
+    "unansweredQuestions": [
+      {
+        "questionId": "q-break-fast",
+        "status": "not_found_in_generated_clips",
+        "explanation": "The answer appears outside the clip in s10 (100000–112000 ms): two eggs, Greek yogurt with berries, and water around twelve fifteen. s11 (112000–122000 ms) explains the creator's personal reason for avoiding sugary foods when breaking the fast."
+      }
+    ],
+    "limitations": [
+      "The comments are synthetic fixtures, not collected from YouTube. The two supplied comments support the question, but the reported total of 212 comments and broader audience frequency cannot be verified from this packet."
+    ]
+  }
+}

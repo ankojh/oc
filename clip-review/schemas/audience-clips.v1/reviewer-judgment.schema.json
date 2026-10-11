@@ -1,0 +1,208 @@
+{
+  "$id": "audience-clips.v1/reviewer-judgment.schema.json",
+  "title": "Reviewer model output (internal, clip-review-prompt.v1)",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "questionChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "string"
+          },
+          "support": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "weak",
+              "unsupported"
+            ]
+          },
+          "supportingEvidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "kindIssue": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "questionId",
+          "support",
+          "supportingEvidenceIds",
+          "kindIssue",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "matches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "string"
+          },
+          "clipId": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "direct",
+              "partial",
+              "related_only",
+              "no_match",
+              "unverifiable"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "answerPassages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "clipTranscriptSegmentId": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "clipTranscriptSegmentId",
+                "quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "contextWarnings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "explanation": {
+                  "type": "string"
+                },
+                "sourceSegmentIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "explanation",
+                "sourceSegmentIds"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "questionId",
+          "clipId",
+          "verdict",
+          "explanation",
+          "answerPassages",
+          "contextWarnings",
+          "limitations"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "clipId": {
+            "type": "string"
+          },
+          "questionIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rank",
+          "clipId",
+          "questionIds",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unansweredQuestions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "not_found_in_generated_clips",
+              "not_found_in_available_source",
+              "cannot_assess"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "questionId",
+          "status",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "questionChecks",
+    "matches",
+    "recommendations",
+    "unansweredQuestions",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

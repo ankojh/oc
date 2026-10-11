@@ -1,0 +1,15 @@
+{
+  "name": "opusclip-hackathon",
+  "private": true,
+  "description": "Audience research -> OpusClip -> clip review, joined by a local coordinator",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup": "npm --prefix audience-research ci && npm --prefix clip-review ci && npm --prefix integration ci",
+    "start": "integration/node_modules/.bin/tsx integration/src/launch.ts",
+    "check:env": "integration/node_modules/.bin/tsx integration/src/launch.ts --check",
+    "test": "npm --prefix audience-research test -- --no-cache && npm --prefix clip-review test && npm --prefix integration test",
+    "typecheck": "npm --prefix audience-research run typecheck && npm --prefix clip-review run typecheck && npm --prefix integration run typecheck"
+  }
+}

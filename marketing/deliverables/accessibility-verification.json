@@ -1,0 +1,32 @@
+[
+  {
+    "viewport": 1440,
+    "state": "homepage",
+    "violations": []
+  },
+  {
+    "viewport": 1440,
+    "state": "workbench research",
+    "violations": []
+  },
+  {
+    "viewport": 1440,
+    "state": "workbench review",
+    "violations": []
+  },
+  {
+    "viewport": 390,
+    "state": "homepage",
+    "violations": []
+  },
+  {
+    "viewport": 390,
+    "state": "workbench research",
+    "violations": []
+  },
+  {
+    "viewport": 390,
+    "state": "workbench review",
+    "violations": []
+  }
+]
